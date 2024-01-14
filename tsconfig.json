@@ -1,19 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es2018",                          
+    "target": "es2018",
     "module": "esnext",
-    "moduleResolution": "node",                     
+    "moduleResolution": "node",
     "noEmitOnError": true,
-    "lib": ["es2017"],                            
-    "strict": true,  
-    "esModuleInterop": false,                 
+    "lib": ["es2017"],
+    "strict": true,
+    "esModuleInterop": false,
     "outDir": "out-tsc",
     "rootDir": "./",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "skipLibCheck": true,
     "declaration": true,
     "declarationDir": "types",
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["./src/**/*.ts"]
+  "include": ["./src/**/*.ts", "**/*.tsx"]
 }

@@ -4,6 +4,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import sucrase from "@rollup/plugin-sucrase";
 import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
+import path from "path";
 import { dts } from "rollup-plugin-dts";
 import external from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
@@ -42,16 +43,6 @@ export default [
         ]
       }),
       terser(),
-      postcss({
-        config: {
-          path: "./postcss.config.js"
-        },
-        extensions: [".css"],
-        minimize: true,
-        inject: {
-          insertAt: "top"
-        }
-      }),
       babel({
         babelHelpers: "bundled",
         exclude: "node_modules/**"
@@ -68,5 +59,14 @@ export default [
     output: [{ file: "dist/index.d.ts", format: "esm" }],
     external: [/\.css$/],
     plugins: [dts()]
+  },
+  {
+    input: "./src/styles/global.css",
+    output: [{ file: "dist/global.css" }],
+    plugins: [
+      postcss({
+        minimize: true
+      })
+    ]
   }
 ];

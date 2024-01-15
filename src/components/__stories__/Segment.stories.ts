@@ -1,19 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Container } from "../Container";
+import { Segment } from "../Segment";
 
 const meta = {
-  title: "Components/Container",
-  component: Container,
+  title: "Components/Segment",
+  component: Segment,
   tags: ["autodocs"],
   argTypes: {
     className: {
       table: {
         disable: true
       }
+    },
+    as: {
+      table: {
+        disable: true
+      }
     }
   }
-} satisfies Meta<typeof Container>;
+} satisfies Meta<typeof Segment>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

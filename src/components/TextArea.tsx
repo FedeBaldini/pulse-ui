@@ -4,11 +4,11 @@ import classNames from "classnames";
 
 import { INPUT_CLASSES, InputProps } from "./Input";
 
-export type TextAreaProps = HTMLProps<HTMLTextAreaElement> & InputProps;
+export type TextAreaProps = HTMLProps<HTMLTextAreaElement> &
+  Omit<InputProps, "small">;
 
 export function TextArea({
   className,
-  small,
   error,
   warning,
   success,
@@ -17,7 +17,7 @@ export function TextArea({
   return (
     <textarea
       className={classNames(
-        INPUT_CLASSES({ small, error, warning, success }),
+        INPUT_CLASSES({ error, warning, success }),
         className
       )}
       {...props}

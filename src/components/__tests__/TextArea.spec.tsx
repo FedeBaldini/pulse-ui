@@ -10,13 +10,6 @@ describe("components/TextArea", () => {
     );
   });
 
-  it("renders as small", () => {
-    render(<TextArea small placeholder="Insert text" />);
-    expect(screen.getByPlaceholderText("Insert text")).toHaveClass(
-      "text-sm px-2"
-    );
-  });
-
   it.each([
     ["error", { error: true }],
     ["warning", { warning: true }],

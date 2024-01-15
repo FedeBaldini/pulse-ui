@@ -19,7 +19,6 @@ export const Standard: StoryFn<TextAreaProps> = (args) => (
 );
 Standard.args = {
   placeholder: "Insert text here...",
-  small: false,
   disabled: false,
   error: false,
   warning: false,

@@ -1,10 +1,8 @@
-import { PropsWithChildren } from "react";
-
 import classNames from "classnames";
 
-import { WithOptionalClassname } from "../types";
+import { WithChildren, WithOptionalClassname } from "../types";
 
-export interface ButtonProps extends PropsWithChildren, WithOptionalClassname {
+export interface ButtonProps extends WithChildren, WithOptionalClassname {
   style?: "primary" | "secondary" | "tertiary";
   outlined?: boolean;
   small?: boolean;

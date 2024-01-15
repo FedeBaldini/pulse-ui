@@ -6,7 +6,7 @@ module.exports = {
   testPathIgnorePatterns: ["/node_modules/"],
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": "ts-jest",
-    "^.+\\.css$": "<rootDir>/src/config/jest/cssTransform.js"
+    "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js"
   },
   transformIgnorePatterns: [
     "/node_modules/",
@@ -18,5 +18,5 @@ module.exports = {
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   modulePaths: ["<rootDir>"],
   testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/src/config/jest/setup.js"]
+  setupFilesAfterEnv: ["<rootDir>/config/jest/setup.js"]
 };

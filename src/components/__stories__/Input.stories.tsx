@@ -18,5 +18,8 @@ export const Standard: StoryFn<InputProps> = (args) => <Input {...args} />;
 Standard.args = {
   placeholder: "Insert text here...",
   small: false,
-  disabled: false
+  disabled: false,
+  error: false,
+  warning: false,
+  success: false
 };

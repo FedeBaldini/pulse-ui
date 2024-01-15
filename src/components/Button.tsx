@@ -13,7 +13,14 @@ export interface ButtonProps
       >,
       "style"
     > {
-  style?: "primary" | "secondary" | "tertiary";
+  style?:
+    | "primary"
+    | "secondary"
+    | "tertiary"
+    | "error"
+    | "warning"
+    | "success"
+    | "neutral";
   outlined?: boolean;
   small?: boolean;
 }
@@ -39,12 +46,28 @@ export function Button({
             style === "secondary" && !outlined,
           "bg-tertiary border-tertiary hover:outline-tertiary-extra-light":
             style === "tertiary" && !outlined,
+          "bg-error border-error hover:outline-error-extra-light":
+            style === "error" && !outlined,
+          "bg-warning border-warning hover:outline-warning-extra-light":
+            style === "warning" && !outlined,
+          "bg-success border-success hover:outline-success-extra-light":
+            style === "success" && !outlined,
+          "bg-neutral border-neutral hover:outline-neutral-extra-light":
+            style === "neutral" && !outlined,
           "!text-primary border-primary hover:outline-primary-extra-light":
             style === "primary" && outlined,
           "!text-secondary border-secondary hover:outline-secondary-extra-light":
             style === "secondary" && outlined,
           "!text-tertiary border-tertiary hover:outline-tertiary-extra-light":
             style === "tertiary" && outlined,
+          "!text-error border-error hover:outline-error-extra-light":
+            style === "error" && outlined,
+          "!text-warning border-warning hover:outline-warning-extra-light":
+            style === "warning" && outlined,
+          "!text-success border-success hover:outline-success-extra-light":
+            style === "success" && outlined,
+          "!text-neutral border-neutral hover:outline-neutral-extra-light":
+            style === "neutral" && outlined,
           "text-sm px-2": small
         },
         className

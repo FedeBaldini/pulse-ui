@@ -10,15 +10,20 @@ describe("components/Button", () => {
     );
   });
 
-  it.each<ButtonProps["style"]>(["primary", "secondary", "tertiary"])(
-    "renders as %s",
-    (style) => {
-      render(<Button style={style} children="Click me" />);
-      expect(screen.getByRole("button", { name: "Click me" })).toHaveClass(
-        `bg-${style} border-${style} hover:outline-${style}-extra-light`
-      );
-    }
-  );
+  it.each<ButtonProps["style"]>([
+    "primary",
+    "secondary",
+    "tertiary",
+    "error",
+    "warning",
+    "success",
+    "neutral"
+  ])("renders as %s", (style) => {
+    render(<Button style={style} children="Click me" />);
+    expect(screen.getByRole("button", { name: "Click me" })).toHaveClass(
+      `bg-${style} border-${style} hover:outline-${style}-extra-light`
+    );
+  });
 
   it.each<ButtonProps["style"]>(["primary", "secondary", "tertiary"])(
     "renders as %s and outlined",

@@ -13,7 +13,15 @@ export default {
     },
     style: {
       name: "style",
-      options: ["primary", "secondary", "tertiary"],
+      options: [
+        "primary",
+        "secondary",
+        "tertiary",
+        "error",
+        "warning",
+        "success",
+        "neutral"
+      ],
       control: {
         type: "select"
       }

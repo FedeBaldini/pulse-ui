@@ -18,14 +18,17 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: "**/node_modules"
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/pnpm-lock.yaml') }}
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
 
       - name: Install Dependencies 📦
-        run: yarn install
+        run: pnpm install
       - name: Build  🏗
-        run: yarn build
+        run: pnpm build
       - name: Test ✅
-        run: yarn test
+        run: pnpm test
       - name: Publish 📦
         run: npm publish
         env:

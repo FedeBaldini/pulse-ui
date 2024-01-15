@@ -1,1 +1,0 @@
-{"version":3,"file":"Button.js","sourceRoot":"","sources":["Button.tsx"],"names":[],"mappings":";AAEA,MAAM,UAAU,MAAM;IACpB,OAAO,iBAAQ,SAAS,EAAC,uBAAuB,yBAAkB,CAAC;AACrE,CAAC","sourcesContent":["export interface ButtonProps {}\n\nexport function Button() {\n  return <button className=\"rounded-lg bg-red-600\">Click me</button>;\n}\n"]}

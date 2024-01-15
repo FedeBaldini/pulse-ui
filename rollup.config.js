@@ -61,7 +61,7 @@ export default [
   },
   {
     input: "./src/styles/global.css",
-    output: [{ file: "dist/global.css" }],
+    output: [{ file: "global.css" }],
     plugins: [
       postcss({
         include: "src/styles/global.css",

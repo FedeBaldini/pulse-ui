@@ -3,3 +3,6 @@ dist
 .vscode
 .yarn-error.log
 storybook.log
+.rollup.cache
+global.css
+global.css.map

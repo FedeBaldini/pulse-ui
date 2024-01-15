@@ -1,8 +1,18 @@
+import { ButtonHTMLAttributes, DetailedHTMLProps, HTMLProps } from "react";
+
 import classNames from "classnames";
 
-import { WithChildren, WithOptionalClassname } from "../types";
+import { WithOptionalClassname } from "../types";
 
-export interface ButtonProps extends WithChildren, WithOptionalClassname {
+export interface ButtonProps
+  extends WithOptionalClassname,
+    Omit<
+      DetailedHTMLProps<
+        ButtonHTMLAttributes<HTMLButtonElement>,
+        HTMLButtonElement
+      >,
+      "style"
+    > {
   style?: "primary" | "secondary" | "tertiary";
   outlined?: boolean;
   small?: boolean;
@@ -13,7 +23,8 @@ export function Button({
   outlined,
   small,
   children,
-  className
+  className,
+  ...props
 }: ButtonProps) {
   return (
     <button
@@ -27,16 +38,17 @@ export function Button({
             style === "secondary" && !outlined,
           "bg-tertiary border-tertiary hover:outline-tertiary-extra-light":
             style === "tertiary" && !outlined,
-          "text-primary border-primary hover:outline-primary-extra-light":
+          "!text-primary border-primary hover:outline-primary-extra-light":
             style === "primary" && outlined,
-          "text-secondary border-secondary hover:outline-secondary-extra-light":
+          "!text-secondary border-secondary hover:outline-secondary-extra-light":
             style === "secondary" && outlined,
-          "text-tertiary border-tertiary hover:outline-tertiary-extra-light":
+          "!text-tertiary border-tertiary hover:outline-tertiary-extra-light":
             style === "tertiary" && outlined,
           "text-sm px-2": small
         },
         className
       )}
+      {...props}
     >
       {children}
     </button>

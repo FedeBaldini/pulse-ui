@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const ComponentNode = Component as any;
   return (
     <StyleProvider>
-      <Container>
+      <Container className="mt-8 md:mt-12">
         <ComponentNode {...pageProps} />
       </Container>
     </StyleProvider>

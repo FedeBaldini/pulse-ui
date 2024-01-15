@@ -1,6 +1,6 @@
 {
   "name": "@fbaldini/pulse-ui",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A component library and design system for React, leveraging the power of React, TypeScript, and Tailwind CSS to streamline front-end development with modern and customizable UI components.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -11,7 +11,8 @@
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -90,6 +91,8 @@
     "/dist",
     "!/dist/**/__tests__",
     "!/dist/**/__mocks__",
-    "!/dist/**/__stories__"
+    "!/dist/**/__stories__",
+    "global.css",
+    "global.css.map"
   ]
 }

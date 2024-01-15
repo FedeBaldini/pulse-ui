@@ -19,6 +19,7 @@ jobs:
         with:
           path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/pnpm-lock.yaml') }}
+      - uses: pnpm/action-setup@v2
 
       - name: Install Dependencies 📦
         run: pnpm install

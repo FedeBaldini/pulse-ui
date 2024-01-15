@@ -9,12 +9,14 @@
     "esModuleInterop": false,
     "outDir": "out-tsc",
     "rootDir": "./",
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "skipLibCheck": true,
     "declaration": true,
     "declarationDir": "types",
     "emitDeclarationOnly": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "types": ["@testing-library/jest-dom"]
   },
   "include": ["./src/**/*.ts", "**/*.tsx"]
 }

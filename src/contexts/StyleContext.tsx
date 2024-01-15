@@ -1,11 +1,8 @@
-import {
-  createContext,
-  CSSProperties,
-  PropsWithChildren,
-  useMemo
-} from "react";
+import { createContext, CSSProperties, useMemo } from "react";
 
 import { Config } from "tailwindcss";
+
+import { WithChildren } from "../types";
 
 interface Theme {
   colors: {
@@ -46,7 +43,7 @@ const DEFAULT_CONTEXT_VALUE: Theme = {
 export const StyleContext = createContext<IStyleContext>(DEFAULT_CONTEXT_VALUE);
 export const StyleContextProvider = StyleContext.Provider;
 
-interface StyleProviderProps extends PropsWithChildren {
+interface StyleProviderProps extends WithChildren {
   theme?: Partial<Theme>;
 }
 

@@ -1,5 +1,12 @@
-import { PropsWithChildren } from "react";
+import classNames from "classnames";
 
-export function Container({ children }: PropsWithChildren) {
-  return <div className="container mx-auto">{children}</div>;
+import { WithChildren, WithOptionalClassname } from "../types";
+
+export function Container({
+  children,
+  className
+}: WithChildren & WithOptionalClassname) {
+  return (
+    <div className={classNames("container mx-auto", className)}>{children}</div>
+  );
 }

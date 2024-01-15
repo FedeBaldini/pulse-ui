@@ -1,6 +1,7 @@
 import babel from "@rollup/plugin-babel";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
+import sucrase from "@rollup/plugin-sucrase";
 import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
 import { dts } from "rollup-plugin-dts";
@@ -44,6 +45,10 @@ export default [
       babel({
         babelHelpers: "bundled",
         exclude: "node_modules/**"
+      }),
+      sucrase({
+        exclude: ["node_modules/**"],
+        transforms: ["typescript", "jsx"]
       })
     ],
     external: ["react", "react-dom"]

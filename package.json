@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "private": false,
   "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production rollup -c --bundleConfigAsCjs",
+    "build": "rm -rf dist global.css global.css.map && NODE_ENV=production rollup -c --bundleConfigAsCjs",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",

@@ -57,7 +57,7 @@ export default [
         exclude: "node_modules/**"
       }),
       sucrase({
-        exclude: ["node_modules/**"],
+        exclude: ["node_modules/**", "example/**"],
         transforms: ["typescript", "jsx"]
       })
     ],

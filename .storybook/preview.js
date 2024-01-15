@@ -1,8 +1,7 @@
-import type { Preview } from "@storybook/react";
-
+import { StyleProvider } from "../src";
 import "../src/styles/global.css";
 
-const preview: Preview = {
+const preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
@@ -45,3 +44,11 @@ const preview: Preview = {
 };
 
 export default preview;
+
+export const decorators = [
+  (Story) => (
+    <StyleProvider>
+      <Story />
+    </StyleProvider>
+  )
+];

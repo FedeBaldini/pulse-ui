@@ -101,6 +101,9 @@ devDependencies:
   babel-plugin-react-require:
     specifier: ^4.0.2
     version: 4.0.2
+  classnames:
+    specifier: ^2.5.1
+    version: 2.5.1
   css-loader:
     specifier: ^6.9.0
     version: 6.9.0(webpack@5.89.0)
@@ -5946,6 +5949,10 @@ packages:
 
   /cjs-module-lexer@1.2.3:
     resolution: {integrity: sha512-0TNiGstbQmCFwt4akjjBg5pLRTSyj/PkWQ1ZoO2zntmg9yLqSRxwEa4iCfQLGjqhiqBfOJa7W/E8wfGrTDmlZQ==}
+    dev: true
+
+  /classnames@2.5.1:
+    resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
     dev: true
 
   /clean-css@4.2.4:

@@ -25,7 +25,7 @@ describe("components/Button", () => {
     (style) => {
       render(<Button style={style} children="Click me" outlined />);
       expect(screen.getByRole("button", { name: "Click me" })).toHaveClass(
-        `text-${style} border-${style} hover:outline-${style}-extra-light`
+        `!text-${style} border-${style} hover:outline-${style}-extra-light`
       );
     }
   );

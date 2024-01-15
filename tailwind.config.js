@@ -15,7 +15,23 @@ module.exports = {
         tertiary: "var(--tertiary-color)",
         "tertiary-dark": "var(--tertiary-dark-color)",
         "tertiary-light": "var(--tertiary-light-color)",
-        "tertiary-extra-light": "var(--tertiary-extra-light-color)"
+        "tertiary-extra-light": "var(--tertiary-extra-light-color)",
+        error: "var(--error-color)",
+        "error-dark": "var(--error-dark-color)",
+        "error-light": "var(--error-light-color)",
+        "error-extra-light": "var(--error-extra-light-color)",
+        warning: "var(--warning-color)",
+        "warning-dark": "var(--warning-dark-color)",
+        "warning-light": "var(--warning-light-color)",
+        "warning-extra-light": "var(--warning-extra-light-color)",
+        success: "var(--success-color)",
+        "success-dark": "var(--success-dark-color)",
+        "success-light": "var(--success-light-color)",
+        "success-extra-light": "var(--success-extra-light-color)",
+        neutral: "var(--neutral-color)",
+        "neutral-dark": "var(--neutral-dark-color)",
+        "neutral-light": "var(--neutral-light-color)",
+        "neutral-extra-light": "var(--neutral-extra-light-color)"
       }
     }
   },

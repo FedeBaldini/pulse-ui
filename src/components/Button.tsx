@@ -31,6 +31,7 @@ export function Button({
       className={classNames(
         "rounded-lg text-white px-4 py-2 border border-solid",
         "hover:outline hover:outline-2",
+        "disabled:pointer-events-none disabled:opacity-60",
         {
           "bg-primary border-primary hover:outline-primary-extra-light":
             style === "primary" && !outlined,

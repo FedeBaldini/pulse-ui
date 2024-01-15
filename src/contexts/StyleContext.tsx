@@ -18,6 +18,22 @@ interface Theme {
     tertiaryDark: string;
     tertiaryLight: string;
     tertiaryExtraLight: string;
+    error: string;
+    errorDark: string;
+    errorLight: string;
+    errorExtraLight: string;
+    warning: string;
+    warningDark: string;
+    warningLight: string;
+    warningExtraLight: string;
+    success: string;
+    successDark: string;
+    successLight: string;
+    successExtraLight: string;
+    neutral: string;
+    neutralDark: string;
+    neutralLight: string;
+    neutralExtraLight: string;
   };
 }
 
@@ -36,7 +52,23 @@ const DEFAULT_CONTEXT_VALUE: Theme = {
     tertiary: "#e6477f",
     tertiaryDark: "#d83670",
     tertiaryLight: "#ee5893",
-    tertiaryExtraLight: "#f481a9"
+    tertiaryExtraLight: "#f481a9",
+    error: "#e74c3c",
+    errorDark: "#c0392b",
+    errorLight: "#ec7063",
+    errorExtraLight: "#f1948a",
+    warning: "#f39c12",
+    warningDark: "#d35400",
+    warningLight: "#f7b731",
+    warningExtraLight: "#f9e79f",
+    success: "#2ecc71",
+    successDark: "#27ae60",
+    successLight: "#51e898",
+    successExtraLight: "#a2e8c5",
+    neutral: "#95a5a6",
+    neutralDark: "#7f8c8d",
+    neutralLight: "#bdc3c7",
+    neutralExtraLight: "#ecf0f1"
   }
 };
 
@@ -72,7 +104,23 @@ export function StyleProvider({ children, theme }: StyleProviderProps) {
             "--tertiary-color": value.colors.tertiary,
             "--tertiary-dark-color": value.colors.tertiaryDark,
             "--tertiary-light-color": value.colors.tertiaryLight,
-            "--tertiary-extra-light-color": value.colors.tertiaryExtraLight
+            "--tertiary-extra-light-color": value.colors.tertiaryExtraLight,
+            "--error-color": value.colors.error,
+            "--error-dark-color": value.colors.errorDark,
+            "--error-light-color": value.colors.errorLight,
+            "--error-extra-light-color": value.colors.errorExtraLight,
+            "--warning-color": value.colors.warning,
+            "--warning-dark-color": value.colors.warningDark,
+            "--warning-light-color": value.colors.warningLight,
+            "--warning-extra-light-color": value.colors.warningExtraLight,
+            "--success-color": value.colors.success,
+            "--success-dark-color": value.colors.successDark,
+            "--success-light-color": value.colors.successLight,
+            "--success-extra-light-color": value.colors.successExtraLight,
+            "--neutral-color": value.colors.neutral,
+            "--neutral-dark-color": value.colors.neutralDark,
+            "--neutral-light-color": value.colors.neutralLight,
+            "--neutral-extra-light-color": value.colors.neutralExtraLight
           } as CSSProperties
         }
         className="flex-item"

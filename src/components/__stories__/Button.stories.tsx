@@ -26,5 +26,6 @@ Standard.args = {
   children: "Click me",
   style: "primary",
   outlined: false,
-  small: false
+  small: false,
+  disabled: false
 };

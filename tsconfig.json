@@ -19,5 +19,6 @@
     "types": ["@testing-library/jest-dom"],
     "incremental": true
   },
-  "include": ["./src/**/*.ts", "**/*.tsx"]
+  "include": ["./src/**/*.ts", "**/*.tsx"],
+  "exclude": ["example"]
 }

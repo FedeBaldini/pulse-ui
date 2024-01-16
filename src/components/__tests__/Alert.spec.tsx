@@ -3,8 +3,14 @@ import { render, screen } from "@testing-library/react";
 import { Alert } from "../Alert";
 
 describe("components/Alert", () => {
-  it("allows to provide additional classname", () => {
-    render(<Alert content="Alert" className="additional-class" />);
-    expect(screen.getByText("Alert")).toHaveClass("additional-class");
+  it.each([
+    ["error", { error: true }],
+    ["warning", { warning: true }],
+    ["success", { success: true }]
+  ])("renders as %s", (style, props) => {
+    render(<Alert {...props} content="Alert" />);
+    expect(screen.getByText("Alert")).toHaveClass(
+      `!border-${style} !bg-${style}-extra-light !text-${style}-dark`
+    );
   });
 });

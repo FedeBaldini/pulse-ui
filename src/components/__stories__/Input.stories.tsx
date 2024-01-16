@@ -1,16 +1,13 @@
 import { StoryFn } from "@storybook/react";
 
-import { Input, InputProps } from "../Input";
+import { hideControl } from "../../utils/hideControl";
+import { Input, InputProps } from "../forms";
 
 export default {
-  title: "components / Input",
+  title: "components/forms/Input",
   component: Input,
   argTypes: {
-    className: {
-      table: {
-        disable: true
-      }
-    }
+    className: hideControl
   }
 };
 

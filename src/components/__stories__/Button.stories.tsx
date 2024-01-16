@@ -1,16 +1,13 @@
 import { StoryFn } from "@storybook/react";
 
+import { hideControl } from "../../utils/hideControl";
 import { Button, ButtonProps } from "../Button";
 
 export default {
-  title: "components / Button",
+  title: "components/Button",
   component: Button,
   argTypes: {
-    className: {
-      table: {
-        disable: true
-      }
-    },
+    className: hideControl,
     style: {
       name: "style",
       options: [

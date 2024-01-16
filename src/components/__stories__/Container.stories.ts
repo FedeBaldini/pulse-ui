@@ -1,17 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { hideControl } from "../../utils/hideControl";
 import { Container } from "../Container";
 
 const meta = {
-  title: "Components/Container",
+  title: "components/Container",
   component: Container,
   tags: ["autodocs"],
   argTypes: {
-    className: {
-      table: {
-        disable: true
-      }
-    }
+    className: hideControl
   }
 } satisfies Meta<typeof Container>;
 

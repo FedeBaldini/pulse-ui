@@ -1,22 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { hideControl } from "../../utils/hideControl";
 import { Segment } from "../Segment";
 
 const meta = {
-  title: "Components/Segment",
+  title: "components/Segment",
   component: Segment,
   tags: ["autodocs"],
   argTypes: {
-    className: {
-      table: {
-        disable: true
-      }
-    },
-    as: {
-      table: {
-        disable: true
-      }
-    }
+    className: hideControl,
+    as: hideControl
   }
 } satisfies Meta<typeof Segment>;
 

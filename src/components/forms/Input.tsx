@@ -2,7 +2,7 @@ import { HTMLProps } from "react";
 
 import classNames from "classnames";
 
-import { WithOptionalClassname } from "../types";
+import { WithOptionalClassname } from "../../types";
 
 export interface InputProps
   extends HTMLProps<HTMLInputElement>,

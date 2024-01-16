@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 
-import { Input } from "../Input";
+import { Input } from "../forms";
 
-describe("components/Input", () => {
+describe("components/forms/Input", () => {
   it("allows to provide additional classname", () => {
     render(<Input placeholder="Insert text" className="additional-class" />);
     expect(screen.getByPlaceholderText("Insert text")).toHaveClass(

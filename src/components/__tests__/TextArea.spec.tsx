@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 
-import { TextArea } from "../TextArea";
+import { TextArea } from "../forms";
 
-describe("components/TextArea", () => {
+describe("components/forms/TextArea", () => {
   it("allows to provide additional classname", () => {
     render(<TextArea placeholder="Insert text" className="additional-class" />);
     expect(screen.getByPlaceholderText("Insert text")).toHaveClass(

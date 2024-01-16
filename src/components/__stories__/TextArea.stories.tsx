@@ -1,16 +1,13 @@
 import { StoryFn } from "@storybook/react";
 
-import { TextArea, TextAreaProps } from "../TextArea";
+import { hideControl } from "../../utils/hideControl";
+import { TextArea, TextAreaProps } from "../forms";
 
 export default {
-  title: "components / TextArea",
+  title: "components/forms/TextArea",
   component: TextArea,
   argTypes: {
-    className: {
-      table: {
-        disable: true
-      }
-    }
+    className: hideControl
   }
 };
 

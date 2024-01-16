@@ -32,7 +32,7 @@ export function Alert({
         className
       )}
     >
-      {title && <h3 className="font-bold">{title}</h3>}
+      {title && <h3 className="font-semibold">{title}</h3>}
       {content}
     </div>
   );

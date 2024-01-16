@@ -13,7 +13,7 @@ export default {
 
 export const Standard: StoryFn<AvatarProps> = (args) => <Avatar {...args} />;
 Standard.args = {
-  src: "./avatar.jpeg",
+  src: "./avatar.jpg",
   size: "medium",
   firstName: "Federico",
   lastName: "Baldini"

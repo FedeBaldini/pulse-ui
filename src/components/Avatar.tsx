@@ -45,7 +45,7 @@ export function Avatar({
       {hasError ? (
         initials && (
           <span
-            className={classNames("font-bold", {
+            className={classNames("font-semibold", {
               "text-xl": size === "medium",
               "text-2xl": size === "large"
             })}

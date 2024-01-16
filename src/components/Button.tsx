@@ -36,7 +36,7 @@ export function Button({
   return (
     <button
       className={classNames(
-        "rounded-lg text-white px-4 py-2 border border-solid",
+        "rounded-default text-white px-4 py-2 border border-solid",
         "hover:outline hover:outline-2",
         "disabled:pointer-events-none disabled:opacity-60",
         {

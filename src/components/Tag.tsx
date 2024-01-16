@@ -17,7 +17,7 @@ export function Tag({ style, children, className }: TagProps) {
   return (
     <span
       className={classNames(
-        "font-semibold text-white px-2 py-1 rounded-lg",
+        "font-semibold text-white px-2 py-1 rounded-default",
         {
           "bg-primary border-primary hover:outline-primary-extra-light":
             style === "primary",

@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/components/**/*.tsx"],
   theme: {
     extend: {
+      borderRadius: {
+        default: "var(--border-radius)"
+      },
       colors: {
         primary: "var(--primary-color)",
         "primary-dark": "var(--primary-dark-color)",

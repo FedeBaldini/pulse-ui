@@ -3,76 +3,12 @@ import { createContext, CSSProperties, useMemo } from "react";
 import { Config } from "tailwindcss";
 
 import { WithChildren } from "../types";
-
-interface Theme {
-  colors: {
-    primary: string;
-    primaryDark: string;
-    primaryLight: string;
-    primaryExtraLight: string;
-    secondary: string;
-    secondaryDark: string;
-    secondaryLight: string;
-    secondaryExtraLight: string;
-    tertiary: string;
-    tertiaryDark: string;
-    tertiaryLight: string;
-    tertiaryExtraLight: string;
-    error: string;
-    errorDark: string;
-    errorLight: string;
-    errorExtraLight: string;
-    warning: string;
-    warningDark: string;
-    warningLight: string;
-    warningExtraLight: string;
-    success: string;
-    successDark: string;
-    successLight: string;
-    successExtraLight: string;
-    neutral: string;
-    neutralDark: string;
-    neutralLight: string;
-    neutralExtraLight: string;
-  };
-}
+import { DEFAULT_THEME } from "./defaultTheme";
+import { Theme } from "./Theme.interface";
 
 type IStyleContext = Config["theme"];
 
-const DEFAULT_CONTEXT_VALUE: Theme = {
-  colors: {
-    primary: "#3498db",
-    primaryDark: "#2980b9",
-    primaryLight: "#5da5e8",
-    primaryExtraLight: "#a9cce3",
-    secondary: "#8e44ad",
-    secondaryDark: "#6c3483",
-    secondaryLight: "#af7ac5",
-    secondaryExtraLight: "#d2b4de",
-    tertiary: "#e6477f",
-    tertiaryDark: "#d83670",
-    tertiaryLight: "#ee5893",
-    tertiaryExtraLight: "#f481a9",
-    error: "#e74c3c",
-    errorDark: "#c0392b",
-    errorLight: "#ec7063",
-    errorExtraLight: "#f1948a",
-    warning: "#f39c12",
-    warningDark: "#d35400",
-    warningLight: "#f7b731",
-    warningExtraLight: "#f9e79f",
-    success: "#2ecc71",
-    successDark: "#27ae60",
-    successLight: "#51e898",
-    successExtraLight: "#a2e8c5",
-    neutral: "#95a5a6",
-    neutralDark: "#7f8c8d",
-    neutralLight: "#bdc3c7",
-    neutralExtraLight: "#ecf0f1"
-  }
-};
-
-export const StyleContext = createContext<IStyleContext>(DEFAULT_CONTEXT_VALUE);
+export const StyleContext = createContext<IStyleContext>(DEFAULT_THEME);
 export const StyleContextProvider = StyleContext.Provider;
 
 interface StyleProviderProps extends WithChildren {
@@ -82,7 +18,7 @@ interface StyleProviderProps extends WithChildren {
 export function StyleProvider({ children, theme }: StyleProviderProps) {
   const value = useMemo(
     () => ({
-      ...DEFAULT_CONTEXT_VALUE,
+      ...DEFAULT_THEME,
       ...theme
     }),
     [theme]
@@ -93,6 +29,7 @@ export function StyleProvider({ children, theme }: StyleProviderProps) {
       <div
         style={
           {
+            "--border-radius": value.borderRadius.default,
             "--primary-color": value.colors.primary,
             "--primary-dark-color": value.colors.primaryDark,
             "--primary-light-color": value.colors.primaryLight,

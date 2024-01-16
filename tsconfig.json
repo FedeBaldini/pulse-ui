@@ -15,7 +15,8 @@
     "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
-    "types": ["@testing-library/jest-dom"]
+    "types": ["@testing-library/jest-dom"],
+    "noUnusedLocals": true
   },
   "include": ["./src/**/*.ts", "**/*.tsx"],
   "exclude": ["example"]

@@ -6,7 +6,6 @@ import { Segment } from "../Segment";
 const meta = {
   title: "components/Segment",
   component: Segment,
-  tags: ["autodocs"],
   argTypes: {
     className: hideControl,
     as: hideControl

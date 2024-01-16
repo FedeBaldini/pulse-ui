@@ -6,7 +6,6 @@ import { Container } from "../Container";
 const meta = {
   title: "components/Container",
   component: Container,
-  tags: ["autodocs"],
   argTypes: {
     className: hideControl
   }

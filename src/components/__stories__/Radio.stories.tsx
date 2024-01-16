@@ -1,6 +1,6 @@
 import { StoryFn } from "@storybook/react";
 
-import { hideControl } from "../../utils/hideControl";
+import { hideControl } from "../../story-utils/hideControl";
 import { Radio, RadioProps } from "../forms";
 
 export default {

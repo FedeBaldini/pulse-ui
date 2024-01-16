@@ -1,10 +1,10 @@
 import { StoryFn } from "@storybook/react";
 
-import { hideControl } from "../../utils/hideControl";
+import { hideControl } from "../../story-utils/hideControl";
 import { Tag, TagProps } from "../Tag";
 
 export default {
-  Tag: "components/Tag",
+  title: "components/Tag",
   component: Tag,
   argTypes: {
     className: hideControl,

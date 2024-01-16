@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { hideControl } from "../../utils/hideControl";
+import { hideControl } from "../../story-utils/hideControl";
 import { Segment } from "../Segment";
 
 const meta = {

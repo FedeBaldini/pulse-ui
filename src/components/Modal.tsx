@@ -37,6 +37,7 @@ export function Modal({
       <div
         className="relative p-4 w-full max-w-2xl max-h-full"
         data-testid="Modal"
+        onClick={(event) => event.stopPropagation()}
       >
         <div className="relative bg-white rounded-default shadow">
           {header}

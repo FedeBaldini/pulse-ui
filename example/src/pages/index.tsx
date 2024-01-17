@@ -7,7 +7,7 @@ export default function Home() {
       <Button style="primary" small outlined onClick={open}>
         Open modal
       </Button>
-      <Modal isOpen={isOpen} closeOnOutsideClick>
+      <Modal onClose={close} isOpen={isOpen} closeOnOutsideClick>
         <Modal.Header onClose={close}>
           <Title as="h3">Lorem ipsum dolor sit amet</Title>
         </Modal.Header>

@@ -2,12 +2,45 @@ import { Button, Modal, Title, useModal } from "@fbaldini/pulse-ui";
 
 export default function Home() {
   const { close, isOpen, open } = useModal();
+  console.log({ isOpen });
   return (
     <main>
-      <Button style="primary" small outlined onClick={open}>
+      <div>
+        <Title as="h1">PulseUI Examples</Title>
+        <div className="my-8">
+          <Title as="h3">Buttons</Title>
+          <Title as="h5" className="my-2">
+            Default
+          </Title>
+          <div className="flex items-center gap-2">
+            <Button style="primary" onClick={console.log}>
+              Primary
+            </Button>
+            <Button style="secondary" onClick={console.log}>
+              Secondary
+            </Button>
+            <Button style="tertiary" onClick={console.log}>
+              Tertiary
+            </Button>
+            <Button style="error" onClick={console.log}>
+              Error
+            </Button>
+            <Button style="warning" onClick={console.log}>
+              Warning
+            </Button>
+            <Button style="success" onClick={console.log}>
+              Success
+            </Button>
+            <Button style="neutral" onClick={console.log}>
+              Neutral
+            </Button>
+          </div>
+        </div>
+      </div>
+      <Button style="primary" onClick={open}>
         Open modal
       </Button>
-      <Modal onClose={close} isOpen={isOpen} closeOnOutsideClick>
+      <Modal onClose={close} isOpen={false} closeOnOutsideClick>
         <Modal.Header onClose={close}>
           <Title as="h3">Lorem ipsum dolor sit amet</Title>
         </Modal.Header>

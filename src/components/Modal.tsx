@@ -26,9 +26,12 @@ export function Modal({
   return (
     <div
       className={classNames(
-        { hidden: !isOpen },
+        {
+          hidden: !isOpen,
+          "flex justify-center items-center w-full h-full max-h-full md:inset-0":
+            isOpen
+        },
         "overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50",
-        "flex justify-center items-center w-full h-full max-h-full md:inset-0",
         "bg-[rgb(236,240,241,.8)]"
       )}
       data-testid="ModalBackground"

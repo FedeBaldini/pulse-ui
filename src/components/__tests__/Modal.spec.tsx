@@ -4,9 +4,9 @@ import userEvent from "@testing-library/user-event";
 import { Modal } from "../Modal";
 
 describe("components/Modal", () => {
-  it("doesn't render when not open", () => {
+  it("doesn't render when not isOpen", () => {
     render(
-      <Modal open={false}>
+      <Modal isOpen={false}>
         <Modal.Content children="Content" />
       </Modal>
     );
@@ -16,7 +16,7 @@ describe("components/Modal", () => {
   it("closes on outside click", async () => {
     let onClose = jest.fn();
     const { unmount } = render(
-      <Modal open={false} onClose={onClose} closeOnOutsideClick>
+      <Modal isOpen={false} onClose={onClose} closeOnOutsideClick>
         <Modal.Content children="Content" />
       </Modal>
     );
@@ -27,7 +27,7 @@ describe("components/Modal", () => {
     onClose = jest.fn();
     unmount();
     render(
-      <Modal open={false} onClose={onClose} closeOnOutsideClick={false}>
+      <Modal isOpen={false} onClose={onClose} closeOnOutsideClick={false}>
         <Modal.Content children="Content" />
       </Modal>
     );

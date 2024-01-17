@@ -33,7 +33,7 @@ export const Standard: StoryFn<ModalProps> = (args) => (
   </Modal>
 );
 Standard.args = {
-  open: true
+  isOpen: true
 };
 
 export const WithHeader: StoryFn<ModalProps> = (args) => (
@@ -58,7 +58,7 @@ export const WithHeader: StoryFn<ModalProps> = (args) => (
   </Modal>
 );
 WithHeader.args = {
-  open: true
+  isOpen: true
 };
 
 export const WithActions: StoryFn<ModalProps> = (args) => (
@@ -83,7 +83,7 @@ export const WithActions: StoryFn<ModalProps> = (args) => (
   </Modal>
 );
 WithActions.args = {
-  open: true
+  isOpen: true
 };
 
 export const Complete: StoryFn<ModalProps> = (args) => (
@@ -111,5 +111,5 @@ export const Complete: StoryFn<ModalProps> = (args) => (
   </Modal>
 );
 Complete.args = {
-  open: true
+  isOpen: true
 };

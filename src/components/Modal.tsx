@@ -1,17 +1,19 @@
+import { useCallback, useState } from "react";
+
 import classNames from "classnames";
 
 import { useChildren } from "../hooks";
 import { SimpleHandler, WithChildren, WithOptionalClassname } from "../types";
 
 export interface ModalProps extends WithChildren {
-  open?: boolean;
+  isOpen?: boolean;
   onClose?: SimpleHandler;
   closeOnOutsideClick?: boolean;
 }
 
 export function Modal({
   children,
-  open,
+  isOpen,
   closeOnOutsideClick,
   onClose
 }: ModalProps) {
@@ -24,7 +26,7 @@ export function Modal({
   return (
     <div
       className={classNames(
-        { hidden: !open },
+        { hidden: !isOpen },
         "overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50",
         "flex justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full",
         "bg-neutral-extra-light bg-opacity-75"
@@ -114,3 +116,17 @@ function ModalActions({
 Modal.Header = ModalHeader;
 Modal.Content = ModalContent;
 Modal.Actions = ModalActions;
+
+export function useModal() {
+  const [isOpen, setOpen] = useState(false);
+
+  return {
+    open: useCallback(() => {
+      setOpen(true);
+    }, []),
+    close: useCallback(() => {
+      setOpen(false);
+    }, []),
+    isOpen
+  };
+}

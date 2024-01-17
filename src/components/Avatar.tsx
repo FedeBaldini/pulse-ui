@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import classNames from "classnames";
 
@@ -24,10 +24,14 @@ export function Avatar({
   const handleImageError = useCallback(() => {
     setHasError(true);
     if (!firstName && !lastName) return;
+  }, [firstName, lastName, src]);
+
+  useEffect(() => {
+    if (!firstName && !lastName) return;
     setInitials(
       `${firstName?.charAt(0).toUpperCase()}${lastName?.charAt(0).toUpperCase()}`
     );
-  }, [firstName, lastName, src]);
+  }, [firstName, lastName]);
 
   return (
     <div

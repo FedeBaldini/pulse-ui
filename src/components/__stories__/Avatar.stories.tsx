@@ -11,9 +11,19 @@ export default {
   }
 };
 
-export const Standard: StoryFn<AvatarProps> = (args) => <Avatar {...args} />;
-Standard.args = {
+export const WithImage: StoryFn<AvatarProps> = (args) => <Avatar {...args} />;
+WithImage.args = {
   src: "./avatar.jpg",
+  size: "medium",
+  firstName: "",
+  lastName: ""
+};
+
+export const WithInitials: StoryFn<AvatarProps> = (args) => (
+  <Avatar {...args} />
+);
+WithInitials.args = {
+  src: "",
   size: "medium",
   firstName: "Federico",
   lastName: "Baldini"

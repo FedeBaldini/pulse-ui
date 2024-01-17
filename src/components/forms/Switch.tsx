@@ -36,7 +36,7 @@ export function Switch({
         className={classNames(
           "w-11 h-6 bg-neutral-extra-light rounded-full peer",
           "peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary-extra-light",
-          "peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white peer-checked:bg-primary",
+          "peer-checked:after:translate-x-full peer-checked:after:border-white peer-checked:bg-primary",
           "after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"
         )}
       />

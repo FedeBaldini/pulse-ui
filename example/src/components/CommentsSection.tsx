@@ -46,7 +46,7 @@ export function CommentsSection() {
         Group with separator
       </Title>
       <Comment.Group separator>
-        {[4, 5, 6, 7].map((key) => (
+        {[4, 5, 6].map((key) => (
           <Comment key={key}>
             <Comment.Avatar src="./avatar.jpg" />
             <Comment.Author>Federico Baldini</Comment.Author>

@@ -7,7 +7,7 @@ export function ButtonsSection() {
       <Title as="h5" className="my-2">
         Default
       </Title>
-      <div className="flex items-center gap-2">
+      <div className="grid grid-cols-2 md:flex items-center gap-2">
         <Button style="primary" onClick={console.log}>
           Primary
         </Button>
@@ -33,7 +33,7 @@ export function ButtonsSection() {
       <Title as="h5" className="my-2">
         Outlined
       </Title>
-      <div className="flex items-center gap-2">
+      <div className="grid grid-cols-2 md:flex items-center gap-2">
         <Button outlined style="primary" onClick={console.log}>
           Primary
         </Button>
@@ -59,7 +59,7 @@ export function ButtonsSection() {
       <Title as="h5" className="my-2">
         Small
       </Title>
-      <div className="flex items-center gap-2">
+      <div className="grid grid-cols-2 md:flex items-center gap-2">
         <Button small style="primary" onClick={console.log}>
           Primary
         </Button>
@@ -85,7 +85,7 @@ export function ButtonsSection() {
       <Title as="h5" className="my-2">
         Combined
       </Title>
-      <div className="flex items-center gap-2">
+      <div className="grid grid-cols-2 md:flex items-center gap-2">
         <Button small outlined style="primary" onClick={console.log}>
           Primary
         </Button>

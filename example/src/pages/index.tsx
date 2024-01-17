@@ -4,7 +4,9 @@ import { AlertsSection } from "../components/AlertsSection";
 import { AvatarsSection } from "../components/AvatarsSection";
 import { ButtonsSection } from "../components/ButtonsSection";
 import { CommentsSection } from "../components/CommentsSection";
+import { LoadersSection } from "../components/LoadersSection";
 import { ModalsSection } from "../components/ModalsSection";
+import { SegmentsSection } from "../components/SegmentsSection";
 import { TagsSection } from "../components/TagsSection";
 import { TitlesSection } from "../components/TitlesSection";
 
@@ -21,6 +23,8 @@ export default function Home() {
       <ModalsSection />
       <AvatarsSection />
       <CommentsSection />
+      <LoadersSection />
+      <SegmentsSection />
     </main>
   );
 }

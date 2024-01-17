@@ -8,9 +8,9 @@ export function AvatarsSection() {
         Default
       </Title>
       <div className="flex items-center gap-4">
-        <Avatar />
-        <Avatar />
-        <Avatar />
+        <Avatar size="small" />
+        <Avatar size="medium" />
+        <Avatar size="large" />
       </div>
       <Title as="h5" className="my-2">
         With image

@@ -45,5 +45,6 @@ Standard.args = {
   size: "medium",
   style: "primary",
   align: "left",
-  inline: false
+  inline: false,
+  dimmed: false
 };

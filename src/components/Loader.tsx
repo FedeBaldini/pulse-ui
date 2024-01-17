@@ -14,6 +14,7 @@ export interface LoaderProps extends WithOptionalClassname {
     | "neutral";
   align?: "left" | "center" | "right";
   inline?: boolean;
+  dimmed?: boolean;
 }
 
 export function Loader({
@@ -21,6 +22,7 @@ export function Loader({
   style = "primary",
   align = "left",
   inline,
+  dimmed,
   className
 }: LoaderProps) {
   return (
@@ -29,6 +31,10 @@ export function Loader({
         {
           "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
             !inline,
+          "w-full h-full flex items-center justify-center": !inline,
+          "backdrop-blur-sm bg-white/30": dimmed
+        },
+        {
           "text-left": align === "left",
           "text-center": align === "center",
           "text-right": align === "right"

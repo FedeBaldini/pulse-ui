@@ -42,7 +42,7 @@ describe("components/Loader", () => {
     const { unmount } = render(<Loader />);
 
     expect(screen.getByTestId("Loader")).toHaveClass(
-      "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center"
     );
     expect(screen.getByRole("img")).not.toHaveClass("inline");
 
@@ -50,8 +50,15 @@ describe("components/Loader", () => {
     render(<Loader inline />);
 
     expect(screen.getByTestId("Loader")).not.toHaveClass(
-      "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center"
     );
     expect(screen.getByRole("img")).toHaveClass("inline");
+  });
+
+  it("renders with dimmed background", () => {
+    render(<Loader dimmed />);
+    expect(screen.getByTestId("Loader")).toHaveClass(
+      "backdrop-blur-sm bg-white/30"
+    );
   });
 });

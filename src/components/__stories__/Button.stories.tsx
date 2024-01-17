@@ -8,6 +8,7 @@ export default {
   component: Button,
   argTypes: {
     className: hideControl,
+    onClick: hideControl,
     style: {
       name: "style",
       options: [

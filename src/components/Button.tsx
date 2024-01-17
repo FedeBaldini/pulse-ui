@@ -1,18 +1,13 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+import { ButtonHTMLAttributes } from "react";
 
 import classNames from "classnames";
 
-import { WithOptionalClassname } from "../types";
+import { SimpleHandler, WithChildren, WithOptionalClassname } from "../types";
 
 export interface ButtonProps
   extends WithOptionalClassname,
-    Omit<
-      DetailedHTMLProps<
-        ButtonHTMLAttributes<HTMLButtonElement>,
-        HTMLButtonElement
-      >,
-      "style"
-    > {
+    WithChildren,
+    Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children" | "style"> {
   style?:
     | "primary"
     | "secondary"
@@ -23,6 +18,8 @@ export interface ButtonProps
     | "neutral";
   outlined?: boolean;
   small?: boolean;
+  disabled?: boolean;
+  onClick?: SimpleHandler;
 }
 
 export function Button({
@@ -30,6 +27,8 @@ export function Button({
   outlined,
   small,
   children,
+  disabled,
+  onClick,
   className,
   ...props
 }: ButtonProps) {
@@ -72,6 +71,8 @@ export function Button({
         },
         className
       )}
+      disabled={disabled}
+      onClick={onClick}
       {...props}
     >
       {children}

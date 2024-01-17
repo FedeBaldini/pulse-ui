@@ -42,7 +42,7 @@ export function Avatar({
       )}
       data-testid="Avatar"
     >
-      {hasError ? (
+      {hasError || !src ? (
         initials && (
           <span
             className={classNames("font-semibold", {

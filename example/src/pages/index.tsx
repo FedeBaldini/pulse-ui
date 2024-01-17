@@ -3,6 +3,7 @@ import { Button, Modal, Title, useModal } from "@fbaldini/pulse-ui";
 import { AlertsSection } from "../components/AlertsSection";
 import { AvatarsSection } from "../components/AvatarsSection";
 import { ButtonsSection } from "../components/ButtonsSection";
+import { CommentsSection } from "../components/CommentsSection";
 import { ModalsSection } from "../components/ModalsSection";
 import { TagsSection } from "../components/TagsSection";
 import { TitlesSection } from "../components/TitlesSection";
@@ -19,6 +20,7 @@ export default function Home() {
       <AlertsSection />
       <ModalsSection />
       <AvatarsSection />
+      <CommentsSection />
     </main>
   );
 }

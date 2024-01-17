@@ -98,15 +98,16 @@ function CommentGroup({ children, className, separator }: CommentGroupProps) {
   return (
     <ul
       className={classNames(
-        "flex flex-col items-start gap-4 md:gap-6 xl:gap-8 list-none",
+        "flex flex-col items-start gap-4 list-none",
         className
       )}
     >
       {Array.isArray(comments)
-        ? comments.map((comment) => (
+        ? comments.map((comment, index) => (
             <li
+              key={index}
               className={classNames({
-                "pb-4 md:pb-6 xl:pb-8 border-solid border-b border-neutral-light last:border-b-0":
+                "pb-4 border-solid border-b border-neutral-light last:border-b-0":
                   separator
               })}
             >

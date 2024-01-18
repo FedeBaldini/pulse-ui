@@ -2,6 +2,7 @@ import { Button, Modal, Title, useModal } from "@fbaldini/pulse-ui";
 
 import { AlertsSection } from "../components/AlertsSection";
 import { AvatarsSection } from "../components/AvatarsSection";
+import { BreadcrumbsSection } from "../components/BreadcrumbsSection";
 import { ButtonsSection } from "../components/ButtonsSection";
 import { CommentsSection } from "../components/CommentsSection";
 import { FormsSection } from "../components/FormsSection";
@@ -18,6 +19,7 @@ export default function Home() {
     <main className="mb-12">
       <Title as="h1">PulseUI Examples</Title>
       <ButtonsSection />
+      <BreadcrumbsSection />
       <FormsSection />
       <TitlesSection />
       <TagsSection />

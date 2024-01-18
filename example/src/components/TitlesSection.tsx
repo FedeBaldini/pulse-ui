@@ -1,8 +1,8 @@
-import { Button, Title } from "@fbaldini/pulse-ui";
+import { Button, Section, Title } from "@fbaldini/pulse-ui";
 
 export function TitlesSection() {
   return (
-    <div className="my-8">
+    <Section>
       <Title as="h3">Titles</Title>
       <Title as="h1" className="my-2">
         Title as h1
@@ -22,6 +22,6 @@ export function TitlesSection() {
       <Title as="h6" className="my-2">
         Title as h6
       </Title>
-    </div>
+    </Section>
   );
 }

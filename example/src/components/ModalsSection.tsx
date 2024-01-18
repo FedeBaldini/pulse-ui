@@ -1,18 +1,14 @@
-import { Button, Modal, Title, useModal } from "@fbaldini/pulse-ui";
+import { Button, Modal, Section, Title, useModal } from "@fbaldini/pulse-ui";
 
 export function ModalsSection() {
   return (
-    <div className="my-8">
+    <Section>
       <Title as="h3">Modals</Title>
-      <Title as="h5" className="my-2">
-        Default
-      </Title>
+      <Title as="h5">Default</Title>
       <DefaultModal />
-      <Title as="h5" className="my-2">
-        With close on outside click
-      </Title>
+      <Title as="h5">With close on outside click</Title>
       <CloseOutsideClickModal />
-    </div>
+    </Section>
   );
 }
 

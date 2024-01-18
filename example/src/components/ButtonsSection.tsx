@@ -1,8 +1,8 @@
-import { Button, Title } from "@fbaldini/pulse-ui";
+import { Button, Section, Title } from "@fbaldini/pulse-ui";
 
 export function ButtonsSection() {
   return (
-    <div className="my-8">
+    <Section>
       <Title as="h3">Buttons</Title>
       <Title as="h5" className="my-2">
         Default
@@ -30,9 +30,7 @@ export function ButtonsSection() {
           Neutral
         </Button>
       </div>
-      <Title as="h5" className="my-2">
-        Outlined
-      </Title>
+      <Title as="h5">Outlined</Title>
       <div className="grid grid-cols-2 md:flex items-center gap-2">
         <Button outlined style="primary" onClick={console.log}>
           Primary
@@ -56,9 +54,7 @@ export function ButtonsSection() {
           Neutral
         </Button>
       </div>
-      <Title as="h5" className="my-2">
-        Small
-      </Title>
+      <Title as="h5">Small</Title>
       <div className="grid grid-cols-2 md:flex items-center gap-2">
         <Button small style="primary" onClick={console.log}>
           Primary
@@ -82,9 +78,7 @@ export function ButtonsSection() {
           Neutral
         </Button>
       </div>
-      <Title as="h5" className="my-2">
-        Combined
-      </Title>
+      <Title as="h5">Combined</Title>
       <div className="grid grid-cols-2 md:flex items-center gap-2">
         <Button small outlined style="primary" onClick={console.log}>
           Primary
@@ -108,6 +102,6 @@ export function ButtonsSection() {
           Neutral
         </Button>
       </div>
-    </div>
+    </Section>
   );
 }

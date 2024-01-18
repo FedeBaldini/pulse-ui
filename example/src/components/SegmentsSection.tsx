@@ -1,12 +1,10 @@
-import { Segment, Title } from "@fbaldini/pulse-ui";
+import { Section, Segment, Title } from "@fbaldini/pulse-ui";
 
 export function SegmentsSection() {
   return (
-    <div className="my-8">
+    <Section>
       <Title as="h3">Segments</Title>
-      <Title as="h5" className="my-2">
-        Default
-      </Title>
+      <Title as="h5">Default</Title>
       <div className="flex items-center gap-4">
         <Segment>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
@@ -23,9 +21,7 @@ export function SegmentsSection() {
           non.
         </Segment>
       </div>
-      <Title as="h5" className="my-2">
-        Grid
-      </Title>
+      <Title as="h5">Grid</Title>
       <div className="grid md:grid-cols-2 items-center gap-4">
         <Segment>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
@@ -52,6 +48,6 @@ export function SegmentsSection() {
           mattis lacus velit a tellus.
         </Segment>
       </div>
-    </div>
+    </Section>
   );
 }

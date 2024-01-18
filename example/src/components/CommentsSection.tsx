@@ -1,12 +1,10 @@
-import { Button, Comment, Title } from "@fbaldini/pulse-ui";
+import { Button, Comment, Section, Title } from "@fbaldini/pulse-ui";
 
 export function CommentsSection() {
   return (
-    <div className="my-8">
+    <Section>
       <Title as="h3">Comments</Title>
-      <Title as="h5" className="my-2">
-        Default
-      </Title>
+      <Title as="h5">Default</Title>
       <Comment>
         <Comment.Avatar src="./avatar.jpg" />
         <Comment.Author>Federico Baldini</Comment.Author>
@@ -21,9 +19,7 @@ export function CommentsSection() {
         </Comment.Actions>
         <Comment.Meta>Just now</Comment.Meta>
       </Comment>
-      <Title as="h5" className="my-2">
-        Group
-      </Title>
+      <Title as="h5">Group</Title>
       <Comment.Group>
         {[0, 1, 2, 3].map((key) => (
           <Comment key={key}>
@@ -42,9 +38,7 @@ export function CommentsSection() {
           </Comment>
         ))}
       </Comment.Group>
-      <Title as="h5" className="my-2">
-        Group with separator
-      </Title>
+      <Title as="h5">Group with separator</Title>
       <Comment.Group separator>
         {[4, 5, 6].map((key) => (
           <Comment key={key}>
@@ -63,6 +57,6 @@ export function CommentsSection() {
           </Comment>
         ))}
       </Comment.Group>
-    </div>
+    </Section>
   );
 }

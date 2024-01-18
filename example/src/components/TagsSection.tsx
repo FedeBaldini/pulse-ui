@@ -1,11 +1,10 @@
-import { Tag, Title } from "@fbaldini/pulse-ui";
+import { Section, Tag, Title } from "@fbaldini/pulse-ui";
 
 export function TagsSection() {
   return (
-    <div className="my-8">
+    <Section>
       <Title as="h3">Tags</Title>
-
-      <div className="grid grid-cols-2 md:flex items-center gap-2 mt-2">
+      <div className="grid grid-cols-2 md:flex items-center gap-2">
         <Tag style="primary">Primary</Tag>
         <Tag style="secondary">Secondary</Tag>
         <Tag style="tertiary">Tertiary</Tag>
@@ -14,6 +13,6 @@ export function TagsSection() {
         <Tag style="success">Success</Tag>
         <Tag style="neutral">Neutral</Tag>
       </div>
-    </div>
+    </Section>
   );
 }

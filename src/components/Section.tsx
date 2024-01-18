@@ -18,7 +18,7 @@ export function Section({
   return (
     <As
       className={classNames(
-        { "p-4 md:p-6": padded || padded === undefined },
+        { "my-4 md:my-6": padded || padded === undefined },
         className
       )}
       id={id}

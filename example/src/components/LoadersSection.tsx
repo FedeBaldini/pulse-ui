@@ -1,8 +1,8 @@
-import { Loader, Title } from "@fbaldini/pulse-ui";
+import { Loader, Section, Title } from "@fbaldini/pulse-ui";
 
 export function LoadersSection() {
   return (
-    <div className="my-8">
+    <Section>
       <Title as="h3">Loaders</Title>
       <Title as="h5" className="my-2">
         Inline
@@ -12,7 +12,7 @@ export function LoadersSection() {
         <Loader size="medium" inline />
         <Loader size="large" inline />
       </div>
-      <div className="flex items-center gap-4 mt-4">
+      <div className="flex items-center gap-4">
         <Loader size="small" inline style="primary" />
         <Loader size="small" inline style="secondary" />
         <Loader size="small" inline style="tertiary" />
@@ -21,7 +21,7 @@ export function LoadersSection() {
         <Loader size="small" inline style="success" />
         <Loader size="small" inline style="neutral" />
       </div>
-      <div className="flex items-center gap-4 mt-4">
+      <div className="flex items-center gap-4">
         <Loader inline style="primary" />
         <Loader inline style="secondary" />
         <Loader inline style="tertiary" />
@@ -30,7 +30,7 @@ export function LoadersSection() {
         <Loader inline style="success" />
         <Loader inline style="neutral" />
       </div>
-      <div className="flex items-center gap-4 mt-4">
+      <div className="flex items-center gap-4">
         <Loader size="large" inline style="primary" />
         <Loader size="large" inline style="secondary" />
         <Loader size="large" inline style="tertiary" />
@@ -39,6 +39,6 @@ export function LoadersSection() {
         <Loader size="large" inline style="success" />
         <Loader size="large" inline style="neutral" />
       </div>
-    </div>
+    </Section>
   );
 }

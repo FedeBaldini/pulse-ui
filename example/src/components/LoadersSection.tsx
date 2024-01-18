@@ -7,12 +7,12 @@ export function LoadersSection() {
       <Title as="h5" className="my-2">
         Inline
       </Title>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 mb-2">
         <Loader size="small" inline />
         <Loader size="medium" inline />
         <Loader size="large" inline />
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 mb-2">
         <Loader size="small" inline style="primary" />
         <Loader size="small" inline style="secondary" />
         <Loader size="small" inline style="tertiary" />
@@ -21,7 +21,7 @@ export function LoadersSection() {
         <Loader size="small" inline style="success" />
         <Loader size="small" inline style="neutral" />
       </div>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 mb-2">
         <Loader inline style="primary" />
         <Loader inline style="secondary" />
         <Loader inline style="tertiary" />

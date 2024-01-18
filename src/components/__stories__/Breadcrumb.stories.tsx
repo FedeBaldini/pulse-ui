@@ -35,9 +35,9 @@ export const Standard: StoryFn<BreadcrumbProps> = (args) => (
       >
         <path
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m1 9 4-4-4-4"
         />
       </svg>
@@ -58,14 +58,14 @@ export const Standard: StoryFn<BreadcrumbProps> = (args) => (
       >
         <path
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m1 9 4-4-4-4"
         />
       </svg>
       <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2">
-        Flowbite
+        PulseUI PulseUI
       </span>
     </Breadcrumb.Item>
   </Breadcrumb>

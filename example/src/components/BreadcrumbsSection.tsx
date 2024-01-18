@@ -1,106 +1,132 @@
-import { Button, Section, Title } from "@fbaldini/pulse-ui";
+import { Breadcrumb, Section, Title } from "@fbaldini/pulse-ui";
 
-export function ButtonsSection() {
+export function BreadcrumbsSection() {
   return (
     <Section>
-      <Title as="h3">Buttons</Title>
+      <Title as="h3">Breadcrumbs</Title>
       <Title as="h5" className="my-2">
         Default
       </Title>
-      <div className="grid grid-cols-2 md:flex items-center gap-2">
-        <Button style="primary" onClick={console.log}>
-          Primary
-        </Button>
-        <Button style="secondary" onClick={console.log}>
-          Secondary
-        </Button>
-        <Button style="tertiary" onClick={console.log}>
-          Tertiary
-        </Button>
-        <Button style="error" onClick={console.log}>
-          Error
-        </Button>
-        <Button style="warning" onClick={console.log}>
-          Warning
-        </Button>
-        <Button style="success" onClick={console.log}>
-          Success
-        </Button>
-        <Button style="neutral" onClick={console.log}>
-          Neutral
-        </Button>
+      <div className="grid grid-cols-2">
+        <Breadcrumb>
+          <Breadcrumb.Item>
+            <svg
+              className="w-3 h-3 me-2.5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+            </svg>
+            Home
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>
+            <svg
+              className="rtl:rotate-180 block w-3 h-3 mx-1 text-gray-400 "
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <a
+              href="#"
+              className="ms-1 text-sm font-medium hover:text-primary md:ms-2"
+            >
+              Templates
+            </a>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>
+            <svg
+              className="rtl:rotate-180 w-3 h-3 mx-1 text-gray-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2">
+              PulseUI
+            </span>
+          </Breadcrumb.Item>
+        </Breadcrumb>
       </div>
-      <Title as="h5">Outlined</Title>
-      <div className="grid grid-cols-2 md:flex items-center gap-2">
-        <Button outlined style="primary" onClick={console.log}>
-          Primary
-        </Button>
-        <Button outlined style="secondary" onClick={console.log}>
-          Secondary
-        </Button>
-        <Button outlined style="tertiary" onClick={console.log}>
-          Tertiary
-        </Button>
-        <Button outlined style="error" onClick={console.log}>
-          Error
-        </Button>
-        <Button outlined style="warning" onClick={console.log}>
-          Warning
-        </Button>
-        <Button outlined style="success" onClick={console.log}>
-          Success
-        </Button>
-        <Button outlined style="neutral" onClick={console.log}>
-          Neutral
-        </Button>
-      </div>
-      <Title as="h5">Small</Title>
-      <div className="grid grid-cols-2 md:flex items-center gap-2">
-        <Button small style="primary" onClick={console.log}>
-          Primary
-        </Button>
-        <Button small style="secondary" onClick={console.log}>
-          Secondary
-        </Button>
-        <Button small style="tertiary" onClick={console.log}>
-          Tertiary
-        </Button>
-        <Button small style="error" onClick={console.log}>
-          Error
-        </Button>
-        <Button small style="warning" onClick={console.log}>
-          Warning
-        </Button>
-        <Button small style="success" onClick={console.log}>
-          Success
-        </Button>
-        <Button small style="neutral" onClick={console.log}>
-          Neutral
-        </Button>
-      </div>
-      <Title as="h5">Combined</Title>
-      <div className="grid grid-cols-2 md:flex items-center gap-2">
-        <Button small outlined style="primary" onClick={console.log}>
-          Primary
-        </Button>
-        <Button small outlined style="secondary" onClick={console.log}>
-          Secondary
-        </Button>
-        <Button small outlined style="tertiary" onClick={console.log}>
-          Tertiary
-        </Button>
-        <Button small outlined style="error" onClick={console.log}>
-          Error
-        </Button>
-        <Button small outlined style="warning" onClick={console.log}>
-          Warning
-        </Button>
-        <Button small outlined style="success" onClick={console.log}>
-          Success
-        </Button>
-        <Button small outlined style="neutral" onClick={console.log}>
-          Neutral
-        </Button>
+      <Title as="h5" className="my-2">
+        With background
+      </Title>
+      <div className="grid grid-cols-2">
+        <Breadcrumb withBackground>
+          <Breadcrumb.Item>
+            <svg
+              className="w-3 h-3 me-2.5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+            </svg>
+            Home
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>
+            <svg
+              className="rtl:rotate-180 block w-3 h-3 mx-1 text-gray-400 "
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <a
+              href="#"
+              className="ms-1 text-sm font-medium hover:text-primary md:ms-2"
+            >
+              Templates
+            </a>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>
+            <svg
+              className="rtl:rotate-180 w-3 h-3 mx-1 text-gray-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2">
+              PulseUI
+            </span>
+          </Breadcrumb.Item>
+        </Breadcrumb>
       </div>
     </Section>
   );

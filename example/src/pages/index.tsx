@@ -1,4 +1,4 @@
-import { Button, Modal, Title, useModal } from "@fbaldini/pulse-ui";
+import { Title } from "@fbaldini/pulse-ui";
 
 import { AlertsSection } from "../components/AlertsSection";
 import { AvatarsSection } from "../components/AvatarsSection";
@@ -6,21 +6,21 @@ import { BreadcrumbsSection } from "../components/BreadcrumbsSection";
 import { ButtonsSection } from "../components/ButtonsSection";
 import { CommentsSection } from "../components/CommentsSection";
 import { FormsSection } from "../components/FormsSection";
+import { GradientSegmentsSection } from "../components/GradientSegmentsSection";
 import { LoadersSection } from "../components/LoadersSection";
 import { ModalsSection } from "../components/ModalsSection";
+import { ProgressBarsSection } from "../components/ProgressBarsSection";
 import { SegmentsSection } from "../components/SegmentsSection";
 import { TagsSection } from "../components/TagsSection";
 import { TitlesSection } from "../components/TitlesSection";
 
 export default function Home() {
-  const { close, isOpen, open } = useModal();
-
   return (
     <main className="mb-12">
       <Title as="h1">PulseUI Examples</Title>
       <ButtonsSection />
-      <BreadcrumbsSection />
       <FormsSection />
+      <ProgressBarsSection />
       <TitlesSection />
       <TagsSection />
       <AlertsSection />
@@ -29,6 +29,8 @@ export default function Home() {
       <CommentsSection />
       <LoadersSection />
       <SegmentsSection />
+      <GradientSegmentsSection />
+      <BreadcrumbsSection />
     </main>
   );
 }

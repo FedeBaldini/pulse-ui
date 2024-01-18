@@ -14,9 +14,10 @@ export function Breadcrumb({
   return (
     <nav
       className={classNames(
-        "flex px-5 py-3 rounded-default",
+        "flex px-5 rounded-default",
         {
-          "border border-neutral-light bg-neutral-extra-light": withBackground
+          "py-3 border border-neutral-light bg-neutral-extra-light":
+            withBackground
         },
         className
       )}

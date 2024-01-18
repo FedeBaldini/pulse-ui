@@ -14,8 +14,10 @@ export function Breadcrumb({
   return (
     <nav
       className={classNames(
-        "flex px-5 py-3 text-gray-700 rounded-default",
-        { "border border-gray-200 bg-gray-50": withBackground },
+        "flex px-5 py-3 rounded-default",
+        {
+          "border border-neutral-light bg-neutral-extra-light": withBackground
+        },
         className
       )}
       aria-label="Breadcrumb"

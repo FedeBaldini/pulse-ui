@@ -3,6 +3,7 @@ export * from "./Avatar";
 export * from "./Button";
 export * from "./Comment";
 export * from "./Container";
+export * from "./GradientSegment";
 export * from "./Loader";
 export * from "./Modal";
 export * from "./Section";

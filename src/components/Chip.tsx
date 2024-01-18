@@ -1,16 +1,9 @@
 import classNames from "classnames";
 
-import { WithChildren, WithOptionalClassname } from "../types";
+import { ThemeStyle, WithChildren, WithOptionalClassname } from "../types";
 
 export interface ChipProps extends WithOptionalClassname, WithChildren {
-  style?:
-    | "primary"
-    | "secondary"
-    | "tertiary"
-    | "error"
-    | "warning"
-    | "success"
-    | "neutral";
+  style?: ThemeStyle;
 }
 
 export function Chip({ style, children, className }: ChipProps) {

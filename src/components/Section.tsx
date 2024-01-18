@@ -1,9 +1,9 @@
 import classNames from "classnames";
 
-import { WithChildren, WithOptionalClassname } from "../types";
+import { HtmlElementTag, WithChildren, WithOptionalClassname } from "../types";
 
 export interface SectionProps extends WithChildren, WithOptionalClassname {
-  as?: keyof JSX.IntrinsicElements;
+  as?: HtmlElementTag;
   id?: string;
   padded?: boolean;
 }

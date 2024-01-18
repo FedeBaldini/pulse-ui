@@ -1,9 +1,9 @@
 import classNames from "classnames";
 
-import { WithChildren, WithOptionalClassname } from "../types";
+import { HtmlElementTag, WithChildren, WithOptionalClassname } from "../types";
 
 interface SegmentProps extends WithChildren, WithOptionalClassname {
-  as?: keyof JSX.IntrinsicElements;
+  as?: HtmlElementTag;
 }
 
 export function Segment({ as: As = "div", children, className }: SegmentProps) {

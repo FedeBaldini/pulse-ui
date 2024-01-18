@@ -1,17 +1,10 @@
 import classNames from "classnames";
 
-import { WithOptionalClassname } from "../types";
+import { ThemeStyle, WithOptionalClassname } from "../types";
 
 export interface LoaderProps extends WithOptionalClassname {
   size?: "small" | "medium" | "large";
-  style?:
-    | "primary"
-    | "secondary"
-    | "tertiary"
-    | "error"
-    | "warning"
-    | "success"
-    | "neutral";
+  style?: ThemeStyle;
   align?: "left" | "center" | "right";
   inline?: boolean;
   dimmed?: boolean;

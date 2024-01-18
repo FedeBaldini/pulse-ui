@@ -1,19 +1,17 @@
 import classNames from "classnames";
 
-import { WithChildren, WithOptionalClassname } from "../types";
+import {
+  HtmlElementTag,
+  ThemeStyle,
+  WithChildren,
+  WithOptionalClassname
+} from "../types";
 
 export interface GradientSegmentProps
   extends WithChildren,
     WithOptionalClassname {
-  as?: keyof JSX.IntrinsicElements;
-  style?:
-    | "primary"
-    | "secondary"
-    | "tertiary"
-    | "error"
-    | "warning"
-    | "success"
-    | "neutral";
+  as?: HtmlElementTag;
+  style?: ThemeStyle;
 }
 
 export function GradientSegment({

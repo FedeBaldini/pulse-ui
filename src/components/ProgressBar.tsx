@@ -1,18 +1,11 @@
 import classNames from "classnames";
 
-import { WithOptionalClassname } from "../types";
+import { ThemeStyle, WithOptionalClassname } from "../types";
 
 export interface ProgressBarProps extends WithOptionalClassname {
   percentage: number;
   size?: "small" | "medium" | "large";
-  style?:
-    | "primary"
-    | "secondary"
-    | "tertiary"
-    | "error"
-    | "warning"
-    | "success"
-    | "neutral";
+  style?: ThemeStyle;
 }
 
 export function ProgressBar({

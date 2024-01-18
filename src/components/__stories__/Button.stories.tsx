@@ -35,3 +35,14 @@ Standard.args = {
   small: false,
   disabled: false
 };
+
+export const ButtonFileUpload: StoryFn<ButtonProps> = (args) => (
+  <Button.FileUpload {...args} />
+);
+ButtonFileUpload.args = {
+  children: "Click me",
+  style: "primary",
+  outlined: false,
+  small: false,
+  disabled: false
+};

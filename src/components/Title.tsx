@@ -12,7 +12,7 @@ export function Title({ as: As = "h1", children, className }: TitleProps) {
   return (
     <As
       className={classNames(
-        "font-semibold",
+        "font-semibold my-2",
         {
           "text-md": As === "h6",
           "text-lg": As === "h5",

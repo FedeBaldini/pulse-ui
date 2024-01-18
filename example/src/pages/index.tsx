@@ -4,6 +4,7 @@ import { AlertsSection } from "../components/AlertsSection";
 import { AvatarsSection } from "../components/AvatarsSection";
 import { ButtonsSection } from "../components/ButtonsSection";
 import { CommentsSection } from "../components/CommentsSection";
+import { FormsSection } from "../components/FormsSection";
 import { LoadersSection } from "../components/LoadersSection";
 import { ModalsSection } from "../components/ModalsSection";
 import { SegmentsSection } from "../components/SegmentsSection";
@@ -17,6 +18,7 @@ export default function Home() {
     <main className="mb-12">
       <Title as="h1">PulseUI Examples</Title>
       <ButtonsSection />
+      <FormsSection />
       <TitlesSection />
       <TagsSection />
       <AlertsSection />

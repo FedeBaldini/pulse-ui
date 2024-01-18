@@ -5,6 +5,7 @@ export * from "./Comment";
 export * from "./Container";
 export * from "./Loader";
 export * from "./Modal";
+export * from "./Section";
 export * from "./Segment";
 export * from "./Tag";
 export * from "./Title";

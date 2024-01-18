@@ -10,7 +10,7 @@ export * from "./Modal";
 export * from "./ProgressBar";
 export * from "./Section";
 export * from "./Segment";
-export * from "./Tag";
+export * from "./Chip";
 export * from "./Title";
 
 export * from "./forms";

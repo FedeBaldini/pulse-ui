@@ -1,11 +1,11 @@
 import { StoryFn } from "@storybook/react";
 
 import { hideControl } from "../../story-utils/hideControl";
-import { Tag, TagProps } from "../Tag";
+import { Chip, ChipProps } from "../Chip";
 
 export default {
-  title: "components/Tag",
-  component: Tag,
+  title: "components/Chip",
+  component: Chip,
   argTypes: {
     className: hideControl,
     style: {
@@ -26,8 +26,8 @@ export default {
   }
 };
 
-export const Standard: StoryFn<TagProps> = (args) => <Tag {...args} />;
+export const Standard: StoryFn<ChipProps> = (args) => <Chip {...args} />;
 Standard.args = {
-  children: "Tag",
+  children: "Chip",
   style: "primary"
 };

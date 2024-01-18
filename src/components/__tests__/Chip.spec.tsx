@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react";
 
-import { Tag, TagProps } from "../Tag";
+import { Chip, ChipProps } from "../Chip";
 
-describe("components/Tag", () => {
+describe("components/Chip", () => {
   it("allows to provide additional classname", () => {
-    render(<Tag className="additional-class">Tag</Tag>);
-    expect(screen.getByText("Tag")).toHaveClass("additional-class");
+    render(<Chip className="additional-class">Chip</Chip>);
+    expect(screen.getByText("Chip")).toHaveClass("additional-class");
   });
 
-  it.each<TagProps["style"]>([
+  it.each<ChipProps["style"]>([
     "primary",
     "secondary",
     "tertiary",
@@ -17,8 +17,8 @@ describe("components/Tag", () => {
     "success",
     "neutral"
   ])("renders as %s", (style) => {
-    render(<Tag style={style} children="Tag" />);
-    expect(screen.getByText("Tag")).toHaveClass(
+    render(<Chip style={style} children="Chip" />);
+    expect(screen.getByText("Chip")).toHaveClass(
       `bg-${style} border-${style} hover:outline-${style}-extra-light`
     );
   });

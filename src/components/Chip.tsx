@@ -2,7 +2,7 @@ import classNames from "classnames";
 
 import { WithChildren, WithOptionalClassname } from "../types";
 
-export interface TagProps extends WithOptionalClassname, WithChildren {
+export interface ChipProps extends WithOptionalClassname, WithChildren {
   style?:
     | "primary"
     | "secondary"
@@ -13,7 +13,7 @@ export interface TagProps extends WithOptionalClassname, WithChildren {
     | "neutral";
 }
 
-export function Tag({ style, children, className }: TagProps) {
+export function Chip({ style, children, className }: ChipProps) {
   return (
     <span
       className={classNames(

@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@fbaldini/pulse-ui':
-    specifier: 0.0.35
-    version: 0.0.35(react-dom@18.0.0)(react@18.0.0)
+    specifier: 0.0.36
+    version: 0.0.36(react-dom@18.0.0)(react@18.0.0)
   next:
     specifier: 14.0.4
     version: 14.0.4(react-dom@18.0.0)(react@18.0.0)
@@ -43,8 +43,8 @@ devDependencies:
 
 packages:
 
-  /@fbaldini/pulse-ui@0.0.35(react-dom@18.0.0)(react@18.0.0):
-    resolution: {integrity: sha512-5K4WI6mDJJdAse0BH17MebbKigJL7rdIg0OX2YQ32ku874mW2hIWLF8+DZtaIVY7D4kJdft17I1kqAFae9ox1Q==}
+  /@fbaldini/pulse-ui@0.0.36(react-dom@18.0.0)(react@18.0.0):
+    resolution: {integrity: sha512-CPAfhxU++Y5Mrciz+QErD3ovqjqW2i5rHIGLlALQI9t5IohbXGrLOoJ2bWwCOnSFGigf/bcnOphrpVOu/LZUBA==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0

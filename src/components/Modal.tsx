@@ -32,7 +32,7 @@ export function Modal({
             isOpen
         },
         "overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50",
-        "bg-[rgb(236,240,241,.8)]"
+        "bg-[rgb(236,240,241,.8)] dark:bg-[rgb(236,240,241,.9)]"
       )}
       data-testid="ModalBackground"
       onClick={closeOnOutsideClick ? onClose : undefined}

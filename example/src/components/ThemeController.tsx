@@ -1,11 +1,11 @@
 import { Button, Form, Input, Title, useStyle } from "@fbaldini/pulse-ui";
 import { useRouter } from "next/navigation";
 
-interface ColorsControllerProps {
+interface ThemeControllerProps {
   onThemeChange: (theme: any) => void;
 }
 
-export function ColorsController({ onThemeChange }: ColorsControllerProps) {
+export function ThemeController({ onThemeChange }: ThemeControllerProps) {
   const theme = useStyle();
   const router = useRouter();
 

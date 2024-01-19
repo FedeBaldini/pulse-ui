@@ -4,8 +4,8 @@ import { Container, Section, StyleProvider } from "@fbaldini/pulse-ui";
 import "@fbaldini/pulse-ui/global.css";
 import type { AppProps } from "next/app";
 
-import { ColorsController } from "../components/ColorsController";
 import { ModeSwitcher } from "../components/ModeSwitcher";
+import { ThemeController } from "../components/ThemeController";
 import "../styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -22,9 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
             isDarkModeActive={isDarkModeActive}
             setDarkModeActive={setDarkModeActive}
           />
-          <Section>
-            <ColorsController onThemeChange={setTheme} />
-          </Section>
+          <ThemeController onThemeChange={setTheme} />
           <ComponentNode {...pageProps} />
         </Container>
       </div>

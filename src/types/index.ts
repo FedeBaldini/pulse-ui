@@ -1,3 +1,4 @@
+export * from "./DeepPartial.type";
 export * from "./HtmlElementTag.type";
 export * from "./HtmlHeadingTag.type";
 export * from "./Nullable.type";

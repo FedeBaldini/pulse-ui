@@ -8,7 +8,9 @@ import {
   useState
 } from "react";
 
-import { WithChildren } from "../types";
+import merge from "deepmerge";
+
+import { DeepPartial, WithChildren } from "../types";
 import { DEFAULT_THEME } from "./defaultTheme";
 import { Theme } from "./Theme.interface";
 
@@ -41,8 +43,9 @@ export function StyleProvider({
   }, []);
 
   const mergeTheme = useCallback(
-    (overrides: Partial<Theme> = {}) => {
-      setTheme({ ...theme, ...overrides });
+    (overrides: DeepPartial<Theme> = {}) => {
+      const updatedTheme = merge(theme, overrides) as Theme;
+      setTheme(updatedTheme);
     },
     [theme]
   );

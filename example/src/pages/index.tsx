@@ -1,4 +1,6 @@
-import { Title } from "@fbaldini/pulse-ui";
+import { useEffect } from "react";
+
+import { Title, useStyle } from "@fbaldini/pulse-ui";
 
 import { AlertsSection } from "../components/AlertsSection";
 import { AvatarsSection } from "../components/AvatarsSection";
@@ -16,6 +18,13 @@ import { TabsSection } from "../components/TabsSection";
 import { TitlesSection } from "../components/TitlesSection";
 
 export default function Home() {
+  const { mergeTheme } = useStyle();
+
+  useEffect(() => {
+    console.log("OK");
+    mergeTheme({ colors: { error: "aquamarine" } } as any);
+  }, []);
+
   return (
     <main className="mb-12">
       <Title as="h1">PulseUI Examples</Title>

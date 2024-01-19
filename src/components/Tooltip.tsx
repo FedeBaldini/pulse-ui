@@ -8,7 +8,7 @@ export interface TooltipProps extends WithChildren, WithOptionalClassname {
 
 export function Tooltip({ message, children, className }: TooltipProps) {
   return (
-    <div className={classNames("group relative", className)}>
+    <div className={classNames("group relative flex", className)}>
       {children}
       <span
         className={classNames(

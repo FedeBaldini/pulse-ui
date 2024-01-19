@@ -22,7 +22,7 @@ export default function Home() {
 
   useEffect(() => {
     console.log("OK");
-    mergeTheme({ colors: { error: "aquamarine" } } as any);
+    mergeTheme({ colors: { error: "aquamarine" } });
   }, []);
 
   return (

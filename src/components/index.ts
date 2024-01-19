@@ -13,5 +13,6 @@ export * from "./Segment";
 export * from "./Chip";
 export * from "./Tabs";
 export * from "./Title";
+export * from "./Tooltip";
 
 export * from "./forms";

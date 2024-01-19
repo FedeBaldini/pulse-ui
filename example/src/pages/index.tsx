@@ -14,6 +14,7 @@ import { ProgressBarsSection } from "../components/ProgressBarsSection";
 import { SegmentsSection } from "../components/SegmentsSection";
 import { TabsSection } from "../components/TabsSection";
 import { TitlesSection } from "../components/TitlesSection";
+import { TooltipsSection } from "../components/TooltipsSection";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <ProgressBarsSection />
       <TitlesSection />
       <ChipsSection />
+      <TooltipsSection />
       <AlertsSection />
       <ModalsSection />
       <TabsSection />

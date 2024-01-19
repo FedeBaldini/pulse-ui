@@ -28,7 +28,7 @@ describe("components/Tabs", () => {
     );
 
     expect(screen.getByText("Item disabled")).toHaveClass(
-      "text-neutral cursor-not-allowed"
+      "!text-neutral cursor-not-allowed pointer-events-none"
     );
   });
 

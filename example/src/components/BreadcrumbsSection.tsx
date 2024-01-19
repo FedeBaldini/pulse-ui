@@ -23,7 +23,7 @@ export function BreadcrumbsSection() {
           </Breadcrumb.Item>
           <Breadcrumb.Item>
             <svg
-              className="rtl:rotate-180 block w-3 h-3 mx-1 text-gray-400 "
+              className="rtl:rotate-180 block w-3 h-3 mx-1"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -46,7 +46,7 @@ export function BreadcrumbsSection() {
           </Breadcrumb.Item>
           <Breadcrumb.Item>
             <svg
-              className="rtl:rotate-180 w-3 h-3 mx-1 text-gray-400"
+              className="rtl:rotate-180 w-3 h-3 mx-1 "
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -60,9 +60,7 @@ export function BreadcrumbsSection() {
                 d="m1 9 4-4-4-4"
               />
             </svg>
-            <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2">
-              PulseUI
-            </span>
+            <span className="ms-1 text-sm font-medium md:ms-2">PulseUI</span>
           </Breadcrumb.Item>
         </Breadcrumb>
       </div>
@@ -85,7 +83,7 @@ export function BreadcrumbsSection() {
           </Breadcrumb.Item>
           <Breadcrumb.Item>
             <svg
-              className="rtl:rotate-180 block w-3 h-3 mx-1 text-gray-400 "
+              className="rtl:rotate-180 block w-3 h-3 mx-1"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -108,7 +106,7 @@ export function BreadcrumbsSection() {
           </Breadcrumb.Item>
           <Breadcrumb.Item>
             <svg
-              className="rtl:rotate-180 w-3 h-3 mx-1 text-gray-400"
+              className="rtl:rotate-180 w-3 h-3 mx-1"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -122,9 +120,7 @@ export function BreadcrumbsSection() {
                 d="m1 9 4-4-4-4"
               />
             </svg>
-            <span className="ms-1 text-sm font-medium text-gray-500 md:ms-2">
-              PulseUI
-            </span>
+            <span className="ms-1 text-sm font-medium md:ms-2">PulseUI</span>
           </Breadcrumb.Item>
         </Breadcrumb>
       </div>

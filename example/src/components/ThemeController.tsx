@@ -1,51 +1,89 @@
-import { Button, Form, Input, Title, useStyle } from "@fbaldini/pulse-ui";
+import {
+  Button,
+  Form,
+  Input,
+  Section,
+  Theme,
+  Title,
+  useStyle
+} from "@fbaldini/pulse-ui";
 import { useRouter } from "next/navigation";
 
 interface ThemeControllerProps {
-  onThemeChange: (theme: any) => void;
+  onThemeChange: (theme: Theme) => void;
 }
 
 export function ThemeController({ onThemeChange }: ThemeControllerProps) {
   const theme = useStyle();
   const router = useRouter();
 
+  const borderRadius = theme.borderRadius.default.replace("px", "").trim();
+
   return (
-    <div>
-      <div className="mb-2 flex items-center justify-between">
-        <Title as="h3">Colors controller</Title>
-        <Button
-          className=""
-          style="error"
-          outlined
-          onClick={() => router.refresh()}
-        >
-          Reset
-        </Button>
-      </div>
-      <Form className="grid md:grid-cols-2 lg:grid-cols-4">
-        {Object.entries(theme.colors).map(([name, value]) => (
-          <Form.Field label={name} id={name} key={name}>
+    <Section.Group>
+      <Section>
+        <div className="mb-2 flex items-center justify-between">
+          <Title as="h3">Colors controller</Title>
+          <Button style="error" outlined onClick={() => router.refresh()}>
+            Reset
+          </Button>
+        </div>
+        <Form className="grid md:grid-cols-2 lg:grid-cols-4">
+          {Object.entries(theme.colors).map(([name, value]) => (
+            <Form.Field label={name} id={name} key={name}>
+              <div className="grid grid-cols-[2.5rem_1fr] gap-2">
+                <div
+                  className="w-full h-10 rounded-lg"
+                  style={{ backgroundColor: value }}
+                />
+                <Input
+                  value={value}
+                  onChange={(event) => {
+                    onThemeChange({
+                      ...theme,
+                      colors: {
+                        ...theme.colors,
+                        [name]: event.currentTarget.value
+                      }
+                    });
+                  }}
+                />
+              </div>
+            </Form.Field>
+          ))}
+        </Form>
+      </Section>
+      <Section>
+        <div className="mb-2 flex items-center justify-between">
+          <Title as="h3">Border controller</Title>
+          <Button style="error" outlined onClick={() => router.refresh()}>
+            Reset
+          </Button>
+        </div>
+        <Form className="grid md:grid-cols-2 lg:grid-cols-4">
+          <Form.Field label="borderRadius" id="borderRadius">
             <div className="grid grid-cols-[2.5rem_1fr] gap-2">
               <div
-                className="w-full h-10 rounded-lg"
-                style={{ backgroundColor: value }}
+                className="w-full h-10 border-2 border-neutral"
+                style={{ borderRadius: theme.borderRadius.default }}
               />
               <Input
-                value={value}
+                type="number"
+                value={Number(borderRadius)}
                 onChange={(event) => {
                   onThemeChange({
                     ...theme,
-                    colors: {
-                      ...theme.colors,
-                      [name]: event.currentTarget.value
+                    borderRadius: {
+                      ...theme.borderRadius,
+                      default: `${event.currentTarget.value}px`
                     }
                   });
                 }}
               />
             </div>
           </Form.Field>
-        ))}
-      </Form>
-    </div>
+        </Form>
+      </Section>
+    </Section.Group>
   );
 }

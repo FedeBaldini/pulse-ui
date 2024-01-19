@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Container, Section, StyleProvider } from "@fbaldini/pulse-ui";
+import { Container, StyleProvider } from "@fbaldini/pulse-ui";
 import "@fbaldini/pulse-ui/global.css";
 import type { AppProps } from "next/app";
 

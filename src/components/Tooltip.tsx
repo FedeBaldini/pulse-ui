@@ -1,14 +1,14 @@
 import classNames from "classnames";
 
-import { WithChildren } from "../types";
+import { WithChildren, WithOptionalClassname } from "../types";
 
-export interface TooltipProps extends WithChildren {
+export interface TooltipProps extends WithChildren, WithOptionalClassname {
   message: string;
 }
 
-export function Tooltip({ message, children }: TooltipProps) {
+export function Tooltip({ message, children, className }: TooltipProps) {
   return (
-    <div className="group relative flex">
+    <div className={classNames("group relative", className)}>
       {children}
       <span
         className={classNames(

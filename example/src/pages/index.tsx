@@ -12,6 +12,7 @@ import { LoadersSection } from "../components/LoadersSection";
 import { ModalsSection } from "../components/ModalsSection";
 import { ProgressBarsSection } from "../components/ProgressBarsSection";
 import { SegmentsSection } from "../components/SegmentsSection";
+import { TabsSection } from "../components/TabsSection";
 import { TitlesSection } from "../components/TitlesSection";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <ChipsSection />
       <AlertsSection />
       <ModalsSection />
+      <TabsSection />
       <AvatarsSection />
       <CommentsSection />
       <LoadersSection />

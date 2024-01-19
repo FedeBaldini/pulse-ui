@@ -1,6 +1,6 @@
 import { Button, Section, Title } from "@fbaldini/pulse-ui";
 
-export function ButtonsSection() {
+export function TabsSection() {
   return (
     <Section>
       <Title as="h3">Buttons</Title>

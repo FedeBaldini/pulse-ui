@@ -1,4 +1,4 @@
-import { Button, Section, Title } from "@fbaldini/pulse-ui";
+import { Section, Title } from "@fbaldini/pulse-ui";
 
 export function TitlesSection() {
   return (

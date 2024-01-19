@@ -1,4 +1,4 @@
-import { Breadcrumb, ProgressBar, Section, Title } from "@fbaldini/pulse-ui";
+import { ProgressBar, Section, Title } from "@fbaldini/pulse-ui";
 
 export function ProgressBarsSection() {
   return (

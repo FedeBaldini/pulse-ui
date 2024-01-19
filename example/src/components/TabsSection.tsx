@@ -8,17 +8,21 @@ export function TabsSection() {
     <Section>
       <Title as="h3">Tabs</Title>
       <Tabs>
-        <Tabs.Item disabled>
-          <span onClick={() => setActiveIndex(0)}>First</span>
+        <Tabs.Item onClick={() => setActiveIndex(0)} active={activeIndex === 0}>
+          First
         </Tabs.Item>
-        <Tabs.Item>
-          <span onClick={() => setActiveIndex(1)}>Second</span>
+        <Tabs.Item
+          onClick={() => setActiveIndex(1)}
+          active={activeIndex === 1}
+          disabled
+        >
+          Second
         </Tabs.Item>
-        <Tabs.Item active>
-          <span onClick={() => setActiveIndex(2)}>Third</span>
+        <Tabs.Item onClick={() => setActiveIndex(2)} active={activeIndex === 2}>
+          Third
         </Tabs.Item>
-        <Tabs.Item>
-          <span onClick={() => setActiveIndex(3)}>Fourth</span>
+        <Tabs.Item onClick={() => setActiveIndex(3)} active={activeIndex === 3}>
+          Fourth
         </Tabs.Item>
       </Tabs>
       {activeIndex === 0 ? (

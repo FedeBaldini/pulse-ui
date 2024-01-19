@@ -6,3 +6,4 @@ storybook.log
 .rollup.cache
 global.css
 global.css.map
+storybook-static

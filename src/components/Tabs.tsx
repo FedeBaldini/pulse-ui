@@ -1,7 +1,7 @@
 import classNames from "classnames";
 
 import { useChildren } from "../hooks";
-import { WithChildren, WithOptionalClassname } from "../types";
+import { SimpleHandler, WithChildren, WithOptionalClassname } from "../types";
 
 export interface TabsProps extends WithChildren, WithOptionalClassname {}
 
@@ -20,11 +20,13 @@ export function Tabs({ children, className }: TabsProps) {
   );
 }
 
-function TabsItem({
-  children,
-  disabled,
-  active
-}: WithChildren & { disabled?: boolean; active?: boolean }) {
+interface TabsItemProps extends WithChildren {
+  disabled?: boolean;
+  active?: boolean;
+  onClick?: SimpleHandler;
+}
+
+function TabsItem({ children, disabled, active, onClick }: TabsItemProps) {
   return (
     <li
       className={classNames(
@@ -33,9 +35,10 @@ function TabsItem({
           "hover:text-neutral hover:border-neutral-light cursor-pointer":
             !disabled,
           "!text-primary border-b-2 !border-primary": active,
-          "text-neutral cursor-not-allowed": disabled
+          "text-neutral cursor-not-allowed pointer-events-none": disabled
         }
       )}
+      onClick={onClick}
     >
       {children}
     </li>

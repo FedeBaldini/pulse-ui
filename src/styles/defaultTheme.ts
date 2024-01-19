@@ -32,6 +32,7 @@ export const DEFAULT_THEME: Theme = {
     neutral: "#95a5a6",
     neutralDark: "#7f8c8d",
     neutralLight: "#bdc3c7",
-    neutralExtraLight: "#ecf0f1"
+    neutralExtraLight: "#ecf0f1",
+    darkPrimary: "#1E293B"
   }
 };

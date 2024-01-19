@@ -35,7 +35,8 @@ module.exports = {
         neutral: "var(--neutral-color)",
         "neutral-dark": "var(--neutral-dark-color)",
         "neutral-light": "var(--neutral-light-color)",
-        "neutral-extra-light": "var(--neutral-extra-light-color)"
+        "neutral-extra-light": "var(--neutral-extra-light-color)",
+        "dark-primary": "var(--dark-primary-color)"
       }
     }
   },

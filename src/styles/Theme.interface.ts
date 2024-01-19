@@ -31,5 +31,6 @@ export interface Theme {
     neutralDark: string;
     neutralLight: string;
     neutralExtraLight: string;
+    darkPrimary: string;
   };
 }

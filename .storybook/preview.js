@@ -1,7 +1,12 @@
-import { StyleProvider } from "../src";
+import { Container, StyleProvider } from "../src";
 import "../src/styles/global.css";
 
 const preview = {
+  globalTypes: {
+    darkMode: {
+      defaultValue: false
+    }
+  },
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
@@ -48,7 +53,9 @@ export default preview;
 export const decorators = [
   (Story) => (
     <StyleProvider>
-      <Story />
+      <Container>
+        <Story />
+      </Container>
     </StyleProvider>
   )
 ];

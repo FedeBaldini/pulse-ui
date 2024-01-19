@@ -42,7 +42,7 @@ export function Modal({
         data-testid="Modal"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="relative bg-white rounded-default shadow">
+        <div className="relative bg-white rounded-default shadow dark:bg-slate-800">
           {header}
           {content}
           {actions}
@@ -67,7 +67,7 @@ function ModalHeader({
       {children}
       <button
         type="button"
-        className="text-neutral bg-transparent hover:bg-neutral-extra-light rounded-full text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+        className="text-neutral dark:text-neutral-extra-light bg-transparent hover:bg-neutral-extra-light dark:hover:bg-neutral rounded-full text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
         onClick={onClose}
       >
         <svg
@@ -95,7 +95,12 @@ function ModalContent({
   className
 }: WithChildren & WithOptionalClassname) {
   return (
-    <div className={classNames("p-4 md:p-5 space-y-4", className)}>
+    <div
+      className={classNames(
+        "p-4 md:p-5 space-y-4 dark:text-neutral-extra-light",
+        className
+      )}
+    >
       {children}
     </div>
   );

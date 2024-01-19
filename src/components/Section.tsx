@@ -18,6 +18,7 @@ export function Section({
   return (
     <As
       className={classNames(
+        "dark:text-neutral-extra-light",
         { "my-4 md:my-6": padded || padded === undefined },
         className
       )}

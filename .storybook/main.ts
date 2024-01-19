@@ -10,6 +10,7 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-styling-webpack",
     "@storybook/addon-actions",
+    "storybook-tailwind-dark-mode",
     {
       name: "@storybook/addon-postcss",
       options: {

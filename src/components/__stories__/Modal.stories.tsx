@@ -17,13 +17,13 @@ export default {
 export const Standard: StoryFn<ModalProps> = (args) => (
   <Modal {...args}>
     <Modal.Content>
-      <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in euismod
         nulla. Nullam sagittis lectus ut velit blandit iaculis. Etiam posuere,
         nunc ac iaculis fringilla, tellus sem tincidunt ipsum, ac mattis lacus
         velit a tellus.
       </p>
-      <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+      <p>
         Donec viverra, odio a bibendum imperdiet, turpis ipsum vestibulum
         ligula, at suscipit diam ipsum id nunc. Integer accumsan, libero id
         mollis imperdiet, metus velit finibus enim, eget suscipit lectus nisi
@@ -42,13 +42,13 @@ export const WithHeader: StoryFn<ModalProps> = (args) => (
       <Title as="h3">Lorem ipsum dolor sit amet</Title>
     </Modal.Header>
     <Modal.Content>
-      <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in euismod
         nulla. Nullam sagittis lectus ut velit blandit iaculis. Etiam posuere,
         nunc ac iaculis fringilla, tellus sem tincidunt ipsum, ac mattis lacus
         velit a tellus.
       </p>
-      <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+      <p>
         Donec viverra, odio a bibendum imperdiet, turpis ipsum vestibulum
         ligula, at suscipit diam ipsum id nunc. Integer accumsan, libero id
         mollis imperdiet, metus velit finibus enim, eget suscipit lectus nisi
@@ -64,13 +64,13 @@ WithHeader.args = {
 export const WithActions: StoryFn<ModalProps> = (args) => (
   <Modal {...args}>
     <Modal.Content>
-      <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in euismod
         nulla. Nullam sagittis lectus ut velit blandit iaculis. Etiam posuere,
         nunc ac iaculis fringilla, tellus sem tincidunt ipsum, ac mattis lacus
         velit a tellus.
       </p>
-      <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+      <p>
         Donec viverra, odio a bibendum imperdiet, turpis ipsum vestibulum
         ligula, at suscipit diam ipsum id nunc. Integer accumsan, libero id
         mollis imperdiet, metus velit finibus enim, eget suscipit lectus nisi
@@ -92,13 +92,13 @@ export const Complete: StoryFn<ModalProps> = (args) => (
       <Title as="h3">Lorem ipsum dolor sit amet</Title>
     </Modal.Header>
     <Modal.Content>
-      <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in euismod
         nulla. Nullam sagittis lectus ut velit blandit iaculis. Etiam posuere,
         nunc ac iaculis fringilla, tellus sem tincidunt ipsum, ac mattis lacus
         velit a tellus.
       </p>
-      <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+      <p>
         Donec viverra, odio a bibendum imperdiet, turpis ipsum vestibulum
         ligula, at suscipit diam ipsum id nunc. Integer accumsan, libero id
         mollis imperdiet, metus velit finibus enim, eget suscipit lectus nisi

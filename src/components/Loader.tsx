@@ -22,7 +22,7 @@ export function Loader({
     <div
       className={classNames(
         {
-          "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
+          "dark:bg-slate-800 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2":
             !inline,
           "w-full h-full flex items-center justify-center": !inline,
           "backdrop-blur-sm bg-white/30": dimmed

@@ -42,7 +42,7 @@ export function Switch({
       />
       <span
         className={classNames(
-          "ms-3 text-sm font-medium text-gray-900 dark:text-gray-300",
+          "ms-3 text-sm font-medium dark:text-neutral-extra-light",
           labelClassName
         )}
       >

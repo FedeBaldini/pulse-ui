@@ -9,7 +9,7 @@ export function Title({ as: As = "h1", children, className }: TitleProps) {
   return (
     <As
       className={classNames(
-        "font-semibold my-2",
+        "font-semibold my-2 dark:text-neutral-extra-light",
         {
           "text-md": As === "h6",
           "text-lg": As === "h5",

@@ -3,17 +3,15 @@ import {
   Form,
   Input,
   Section,
-  Theme,
   Title,
   useStyle
 } from "@fbaldini/pulse-ui";
 import { useRouter } from "next/navigation";
 
-interface ThemeControllerProps {
-  onThemeChange: (theme: Theme) => void;
-}
+import { useStyleController } from "../contexts";
 
-export function ThemeController({ onThemeChange }: ThemeControllerProps) {
+export function ThemeController() {
+  const { setTheme } = useStyleController();
   const theme = useStyle();
   const router = useRouter();
 
@@ -33,13 +31,13 @@ export function ThemeController({ onThemeChange }: ThemeControllerProps) {
             <Form.Field label={name} id={name} key={name}>
               <div className="grid grid-cols-[2.5rem_1fr] gap-2">
                 <div
-                  className="w-full h-10 rounded-lg"
+                  className="w-full h-10 rounded-default"
                   style={{ backgroundColor: value }}
                 />
                 <Input
                   value={value}
                   onChange={(event) => {
-                    onThemeChange({
+                    setTheme({
                       ...theme,
                       colors: {
                         ...theme.colors,
@@ -71,7 +69,7 @@ export function ThemeController({ onThemeChange }: ThemeControllerProps) {
                 type="number"
                 value={Number(borderRadius)}
                 onChange={(event) => {
-                  onThemeChange({
+                  setTheme({
                     ...theme,
                     borderRadius: {
                       ...theme.borderRadius,

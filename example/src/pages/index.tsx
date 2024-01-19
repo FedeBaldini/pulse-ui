@@ -1,4 +1,5 @@
 import { Title } from "@fbaldini/pulse-ui";
+import Link from "next/link";
 
 import { AlertsSection } from "../components/AlertsSection";
 import { AvatarsSection } from "../components/AvatarsSection";
@@ -10,6 +11,7 @@ import { FormsSection } from "../components/FormsSection";
 import { GradientSegmentsSection } from "../components/GradientSegmentsSection";
 import { LoadersSection } from "../components/LoadersSection";
 import { ModalsSection } from "../components/ModalsSection";
+import { ModeSwitcher } from "../components/ModeSwitcher";
 import { ProgressBarsSection } from "../components/ProgressBarsSection";
 import { SegmentsSection } from "../components/SegmentsSection";
 import { TabsSection } from "../components/TabsSection";
@@ -20,6 +22,13 @@ export default function Home() {
   return (
     <main className="mb-12">
       <Title as="h1">PulseUI Examples</Title>
+      <ModeSwitcher />
+      <Link
+        className="hover:underline text-neutral text-lg"
+        href="/configurator"
+      >
+        Configure theme
+      </Link>
       <ButtonsSection />
       <FormsSection />
       <ProgressBarsSection />

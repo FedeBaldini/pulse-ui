@@ -19,7 +19,7 @@ export const INPUT_CLASSES = ({
   warning,
   success
 }: InputProps) => ({
-  "w-full rounded-default px-4 py-2 border border-solid border-gray-200 text-gray-700":
+  "w-full rounded-default px-4 py-2 border border-solid border-gray-200 text-gray-700 appearance-none":
     true,
   "hover:border-primary hover:outline hover:outline-2 hover:outline-primary-extra-light":
     true,

@@ -14,6 +14,7 @@ import { ModalsSection } from "../components/ModalsSection";
 import { ModeSwitcher } from "../components/ModeSwitcher";
 import { ProgressBarsSection } from "../components/ProgressBarsSection";
 import { SegmentsSection } from "../components/SegmentsSection";
+import { TablesSection } from "../components/TablesSection";
 import { TabsSection } from "../components/TabsSection";
 import { TitlesSection } from "../components/TitlesSection";
 import { TooltipsSection } from "../components/TooltipsSection";
@@ -31,6 +32,7 @@ export default function Home() {
       </Link>
       <ButtonsSection />
       <FormsSection />
+      <TablesSection />
       <ProgressBarsSection />
       <TitlesSection />
       <ChipsSection />

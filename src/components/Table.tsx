@@ -39,19 +39,21 @@ export function Table({ headers, className, children }: TableProps) {
   return (
     <>
       <div className="flex flex-col gap-2 md:gap-4 lg:hidden">
-        {rows.map((row) => (
+        {rows.map((row, index) => (
           <div
+            key={index}
             className={classNames(
               "rounded-generic border border-neutral-light odd:bg-neutral-extra-light dark:odd:text-dark-primary",
               "px-2 py-4 md:px-4 md:py-6 grid grid-cols-1 gap-2"
             )}
           >
-            {row.props.children.map((child) => {
+            {row.props.children.map((child, index) => {
               const header = headers.find(
                 ({ property }) => property === child.props.property
               );
               return (
                 <Table.Cell
+                  key={index}
                   className="grid grid-cols-1 gap-2 py-0"
                   property={child.props.property}
                 >
@@ -69,7 +71,7 @@ export function Table({ headers, className, children }: TableProps) {
       <div
         className={classNames(
           TABLE_GRID_COLUMN_CLASSES,
-          "hidden: lg:block rounded-generic border border-neutral-light",
+          "hidden lg:block rounded-generic border border-neutral-light",
           className
         )}
         style={{ "--column-count": headers.length } as CSSProperties}
@@ -77,8 +79,8 @@ export function Table({ headers, className, children }: TableProps) {
         <Table.Row className="rounded-t-generic">
           {headers.map((header, index) => (
             <Table.Cell
-              property={header.property}
               key={index}
+              property={header.property}
               className="font-semibold text-lg"
             >
               {header.text}

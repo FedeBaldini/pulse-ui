@@ -18,6 +18,7 @@ import { TablesSection } from "../components/TablesSection";
 import { TabsSection } from "../components/TabsSection";
 import { TitlesSection } from "../components/TitlesSection";
 import { TooltipsSection } from "../components/TooltipsSection";
+import { TypographiesSection } from "../components/TypographiesSection";
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
       <TablesSection />
       <ProgressBarsSection />
       <TitlesSection />
+      <TypographiesSection />
       <ChipsSection />
       <TooltipsSection />
       <AlertsSection />

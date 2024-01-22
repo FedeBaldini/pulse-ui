@@ -11,6 +11,7 @@ export * from "./ProgressBar";
 export * from "./Section";
 export * from "./Segment";
 export * from "./Chip";
+export * from "./Table";
 export * from "./Tabs";
 export * from "./Title";
 export * from "./Tooltip";

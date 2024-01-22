@@ -31,7 +31,7 @@ export function ThemeController() {
             <Form.Field label={name} id={name} key={name}>
               <div className="grid grid-cols-[2.5rem_1fr] gap-2">
                 <div
-                  className="w-full h-10 rounded-default"
+                  className="w-full h-10 rounded-generic"
                   style={{ backgroundColor: value }}
                 />
                 <Input

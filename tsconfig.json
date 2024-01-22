@@ -4,7 +4,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmitOnError": true,
-    "lib": ["es2018", "DOM"],
+    "lib": ["es2017"],
     "strict": true,
     "esModuleInterop": false,
     "rootDir": "./",

@@ -1,3 +1,6 @@
+/**
+ * Represents a style identifier for various theme styles.
+ */
 export type ThemeStyle =
   | "primary"
   | "secondary"

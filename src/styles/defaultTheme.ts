@@ -1,5 +1,10 @@
 import { Theme } from "./Theme.interface";
 
+/**
+ * Predefined theme values for default styling.
+ *
+ * @constant {Theme} DEFAULT_THEME
+ */
 export const DEFAULT_THEME: Theme = {
   borderRadius: {
     generic: "10px",

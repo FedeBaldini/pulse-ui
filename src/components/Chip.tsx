@@ -10,7 +10,7 @@ export function Chip({ style, children, className }: ChipProps) {
   return (
     <span
       className={classNames(
-        "font-semibold text-white px-2 py-1 rounded-default",
+        "font-semibold text-white px-2 py-1 rounded-generic",
         {
           "bg-primary border-primary hover:outline-primary-extra-light":
             style === "primary",

@@ -2,7 +2,7 @@ import { Theme } from "./Theme.interface";
 
 export const DEFAULT_THEME: Theme = {
   borderRadius: {
-    default: "10px"
+    generic: "10px"
   },
   colors: {
     primary: "#3498db",

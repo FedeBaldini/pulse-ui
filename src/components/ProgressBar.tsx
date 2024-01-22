@@ -17,7 +17,7 @@ export function ProgressBar({
   return (
     <div
       className={classNames(
-        "w-full bg-gray-200 rounded-default mb-4",
+        "w-full bg-gray-200 rounded-generic mb-4",
         {
           "h-2": size === "small",
           "h-4": size === "medium",
@@ -28,7 +28,7 @@ export function ProgressBar({
       role="progressbar"
     >
       <div
-        className={classNames("rounded-default", {
+        className={classNames("rounded-generic", {
           "h-2": size === "small",
           "h-4": size === "medium",
           "h-6": size === "large",

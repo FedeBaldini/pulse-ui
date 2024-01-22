@@ -1,6 +1,6 @@
 export interface Theme {
   borderRadius: {
-    default: string;
+    generic: string;
   };
   colors: {
     primary: string;

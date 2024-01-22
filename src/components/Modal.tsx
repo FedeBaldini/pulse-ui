@@ -42,7 +42,7 @@ export function Modal({
         data-testid="Modal"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="relative bg-white rounded-default shadow dark:bg-dark-primary">
+        <div className="relative bg-white rounded-generic shadow dark:bg-dark-primary">
           {header}
           {content}
           {actions}

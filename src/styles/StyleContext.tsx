@@ -25,7 +25,7 @@ export function StyleProvider({ children, theme }: StyleProviderProps) {
       <div
         style={
           {
-            "--border-radius": value.borderRadius.default,
+            "--border-radius-generic": value.borderRadius.generic,
             "--primary-color": value.colors.primary,
             "--primary-dark-color": value.colors.primaryDark,
             "--primary-light-color": value.colors.primaryLight,

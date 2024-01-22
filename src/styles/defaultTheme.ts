@@ -2,7 +2,11 @@ import { Theme } from "./Theme.interface";
 
 export const DEFAULT_THEME: Theme = {
   borderRadius: {
-    generic: "10px"
+    generic: "10px",
+    alert: "10px",
+    button: "10px",
+    input: "10px",
+    segment: "10px"
   },
   colors: {
     primary: "#3498db",

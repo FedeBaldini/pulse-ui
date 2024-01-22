@@ -1,6 +1,10 @@
 export interface Theme {
   borderRadius: {
     generic: string;
+    alert: string;
+    button: string;
+    input: string;
+    segment: string;
   };
   colors: {
     primary: string;

@@ -26,6 +26,10 @@ export function StyleProvider({ children, theme }: StyleProviderProps) {
         style={
           {
             "--border-radius-generic": value.borderRadius.generic,
+            "--border-radius-alert": value.borderRadius.alert,
+            "--border-radius-button": value.borderRadius.button,
+            "--border-radius-input": value.borderRadius.input,
+            "--border-radius-segment": value.borderRadius.segment,
             "--primary-color": value.colors.primary,
             "--primary-dark-color": value.colors.primaryDark,
             "--primary-light-color": value.colors.primaryLight,

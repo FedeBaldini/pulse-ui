@@ -23,7 +23,7 @@ export function GradientSegment({
   return (
     <As
       className={classNames(
-        "bg-gradient-to-r rounded-generic p-4 md:p-6 text-white",
+        "bg-gradient-to-r rounded-segment p-4 md:p-6 text-white",
         {
           "from-primary via-primary-light to-primary-extra-light":
             style === "primary",

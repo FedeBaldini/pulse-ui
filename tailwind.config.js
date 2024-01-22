@@ -5,7 +5,11 @@ module.exports = {
   theme: {
     extend: {
       borderRadius: {
-        generic: "var(--border-radius-generic)"
+        generic: "var(--border-radius-generic)",
+        alert: "var(--border-radius-alert)",
+        button: "var(--border-radius-button)",
+        input: "var(--border-radius-input)",
+        segment: "var(--border-radius-segment)"
       },
       colors: {
         primary: "var(--primary-color)",

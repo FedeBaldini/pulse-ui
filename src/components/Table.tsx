@@ -38,7 +38,7 @@ export function Table({ headers, className, children }: TableProps) {
 
   return (
     <>
-      <div className="flex flex-col gap-2 md:gap-4 lg:hidden">
+      <div className="flex flex-col gap-2 md:gap-4 lg:!hidden">
         {rows.map((row, index) => (
           <div
             key={index}

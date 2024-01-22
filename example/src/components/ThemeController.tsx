@@ -15,8 +15,6 @@ export function ThemeController() {
   const theme = useStyle();
   const router = useRouter();
 
-  const borderRadius = theme.borderRadius.default.replace("px", "").trim();
-
   return (
     <Section.Group>
       <Section>
@@ -59,27 +57,33 @@ export function ThemeController() {
           </Button>
         </div>
         <Form className="grid md:grid-cols-2 lg:grid-cols-4">
-          <Form.Field label="borderRadius" id="borderRadius">
-            <div className="grid grid-cols-[2.5rem_1fr] gap-2">
-              <div
-                className="w-full h-10 border-2 border-neutral"
-                style={{ borderRadius: theme.borderRadius.default }}
-              />
-              <Input
-                type="number"
-                value={Number(borderRadius)}
-                onChange={(event) => {
-                  setTheme({
-                    ...theme,
-                    borderRadius: {
-                      ...theme.borderRadius,
-                      default: `${event.currentTarget.value}px`
-                    }
-                  });
-                }}
-              />
-            </div>
-          </Form.Field>
+          {Object.entries(theme.borderRadius).map(([name, value]) => (
+            <Form.Field label={name} id={name} key={name}>
+              <div className="grid grid-cols-[2.5rem_1fr] gap-2">
+                <div
+                  className="w-full h-10 border-2 border-neutral"
+                  style={{ borderRadius: value }}
+                />
+                <Input
+                  type="number"
+                  value={Number(
+                    (theme.borderRadius as Record<string, string>)[name]
+                      .replace("px", "")
+                      .trim()
+                  )}
+                  onChange={(event) => {
+                    setTheme({
+                      ...theme,
+                      borderRadius: {
+                        ...theme.borderRadius,
+                        [name]: `${event.currentTarget.value}px`
+                      }
+                    });
+                  }}
+                />
+              </div>
+            </Form.Field>
+          ))}
         </Form>
       </Section>
     </Section.Group>

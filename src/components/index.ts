@@ -15,5 +15,6 @@ export * from "./Table";
 export * from "./Tabs";
 export * from "./Title";
 export * from "./Tooltip";
+export * from "./Typography";
 
 export * from "./forms";

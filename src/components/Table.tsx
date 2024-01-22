@@ -2,7 +2,7 @@ import { CSSProperties, ReactElement, ReactNode, useEffect } from "react";
 
 import classNames from "classnames";
 
-import { useActiveBreakpoint, useChildren } from "../hooks";
+import { useChildren } from "../hooks";
 import {
   WithChildren,
   WithOptionalChildren,
@@ -23,12 +23,6 @@ export interface TableProps extends WithOptionalClassname, WithChildren {
 }
 
 export function Table({ headers, className, children }: TableProps) {
-  const activeBreakpoint = useActiveBreakpoint();
-  const isTablet =
-    activeBreakpoint === "xs" ||
-    activeBreakpoint === "sm" ||
-    activeBreakpoint === "md";
-
   const { getChildrenOfType } = useChildren(children);
   const rows = getChildrenOfType(Table.Row) as ReactElement<TableRowProps>[];
 
@@ -42,57 +36,58 @@ export function Table({ headers, className, children }: TableProps) {
 
   if (!rows) return null;
 
-  return isTablet ? (
-    <div className="flex flex-col gap-2 md:gap-4">
-      {rows.map((row) => (
-        <div
-          className={classNames(
-            "rounded-generic border border-neutral-light odd:bg-neutral-extra-light dark:odd:text-dark-primary",
-            "px-2 py-4 md:px-4 md:py-6 grid grid-cols-1 gap-2"
-          )}
-        >
-          {row.props.children.map((child) => {
-            const header = headers.find(
-              ({ property }) => property === child.props.property
-            );
-            return (
-              <Table.Cell
-                className="grid grid-cols-1 gap-2 py-0"
-                property={child.props.property}
-              >
-                <h4
-                  className="text-lg font-semibold leading-none"
-                  children={header?.text}
-                />
-                {child.props.children}
-              </Table.Cell>
-            );
-          })}
-        </div>
-      ))}
-    </div>
-  ) : (
-    <div
-      className={classNames(
-        TABLE_GRID_COLUMN_CLASSES,
-        "rounded-generic border border-neutral-light",
-        className
-      )}
-      style={{ "--column-count": headers.length } as CSSProperties}
-    >
-      <Table.Row className="rounded-t-generic">
-        {headers.map((header, index) => (
-          <Table.Cell
-            property={header.property}
-            key={index}
-            className="font-semibold text-lg"
+  return (
+    <>
+      <div className="flex flex-col gap-2 md:gap-4 lg:hidden">
+        {rows.map((row) => (
+          <div
+            className={classNames(
+              "rounded-generic border border-neutral-light odd:bg-neutral-extra-light dark:odd:text-dark-primary",
+              "px-2 py-4 md:px-4 md:py-6 grid grid-cols-1 gap-2"
+            )}
           >
-            {header.text}
-          </Table.Cell>
+            {row.props.children.map((child) => {
+              const header = headers.find(
+                ({ property }) => property === child.props.property
+              );
+              return (
+                <Table.Cell
+                  className="grid grid-cols-1 gap-2 py-0"
+                  property={child.props.property}
+                >
+                  <h4
+                    className="text-lg font-semibold leading-none"
+                    children={header?.text}
+                  />
+                  {child.props.children}
+                </Table.Cell>
+              );
+            })}
+          </div>
         ))}
-      </Table.Row>
-      {rows}
-    </div>
+      </div>
+      <div
+        className={classNames(
+          TABLE_GRID_COLUMN_CLASSES,
+          "hidden: lg:block rounded-generic border border-neutral-light",
+          className
+        )}
+        style={{ "--column-count": headers.length } as CSSProperties}
+      >
+        <Table.Row className="rounded-t-generic">
+          {headers.map((header, index) => (
+            <Table.Cell
+              property={header.property}
+              key={index}
+              className="font-semibold text-lg"
+            >
+              {header.text}
+            </Table.Cell>
+          ))}
+        </Table.Row>
+        {rows}
+      </div>
+    </>
   );
 }
 

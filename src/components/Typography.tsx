@@ -33,7 +33,7 @@ export function Typography({
           "text-xs": type === "small",
           "text-md": type === "medium",
           "text-lg": type === "large",
-          "text-xl": type === "boldExtraLarge",
+          "text-xl": type === "extraLarge",
           "text-xs font-light": type === "leadSmall",
           "text-md font-light": type === "leadMedium",
           "text-lg font-light": type === "leadLarge",

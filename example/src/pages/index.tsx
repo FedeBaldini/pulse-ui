@@ -18,6 +18,7 @@ import { SegmentsSection } from "../components/SegmentsSection";
 import { TablesSection } from "../components/TablesSection";
 import { TabsSection } from "../components/TabsSection";
 import { TitlesSection } from "../components/TitlesSection";
+import { ToastsSection } from "../components/ToastsSection";
 import { TooltipsSection } from "../components/TooltipsSection";
 import { TypographiesSection } from "../components/TypographiesSection";
 
@@ -42,6 +43,7 @@ export default function Home() {
       <TooltipsSection />
       <AlertsSection />
       <ModalsSection />
+      <ToastsSection />
       <CardsSection />
       <TabsSection />
       <AvatarsSection />

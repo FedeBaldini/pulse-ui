@@ -1,7 +1,7 @@
 import { StoryFn } from "@storybook/react";
 
 import { hideControl } from "../../story-utils/hideControl";
-import { Button, ButtonProps } from "../Button";
+import { Button, ButtonFileUploadProps, ButtonProps } from "../Button";
 
 export default {
   title: "components/Button",
@@ -36,7 +36,7 @@ Standard.args = {
   disabled: false
 };
 
-export const ButtonFileUpload: StoryFn<ButtonProps> = (args) => (
+export const ButtonFileUpload: StoryFn<ButtonFileUploadProps> = (args) => (
   <Button.FileUpload {...args} />
 );
 ButtonFileUpload.args = {

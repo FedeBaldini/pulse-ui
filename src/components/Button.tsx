@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, HTMLProps } from "react";
 
 import classNames from "classnames";
 
@@ -90,6 +90,12 @@ export function Button({
   );
 }
 
+export type ButtonFileUploadProps = Pick<
+  ButtonProps,
+  "style" | "outlined" | "small"
+> &
+  HTMLProps<HTMLInputElement>;
+
 function ButtonFileUpload({
   style = "primary",
   outlined,
@@ -98,7 +104,7 @@ function ButtonFileUpload({
   children,
   className,
   ...props
-}: ButtonProps) {
+}: ButtonFileUploadProps) {
   return (
     <div className="sm:flex sm:items-center">
       <label

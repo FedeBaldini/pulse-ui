@@ -50,12 +50,12 @@ describe("components/forms/Select", () => {
     );
     const select = screen.getByPlaceholderText(
       "Select a value"
-    ) as HTMLProps<HTMLSelectElement>;
+    ) as unknown as HTMLProps<HTMLSelectElement>;
 
-    await userEvent.selectOptions(select as Element, "first");
+    await userEvent.selectOptions(select as unknown as Element, "first");
     expect(select.value).toBe("first");
 
-    await userEvent.selectOptions(select as Element, "second");
+    await userEvent.selectOptions(select as unknown as Element, "second");
     expect(select.value).toBe("second");
   });
 
@@ -73,9 +73,9 @@ describe("components/forms/Select", () => {
     );
     const select = screen.getByPlaceholderText(
       "Select a value"
-    ) as HTMLProps<HTMLSelectElement>;
+    ) as unknown as HTMLProps<HTMLSelectElement>;
 
-    await userEvent.selectOptions(select as Element, "");
+    await userEvent.selectOptions(select as unknown as Element, "");
     expect(select.value).toBe("");
   });
 });

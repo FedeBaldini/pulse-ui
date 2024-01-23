@@ -39,7 +39,7 @@ export function Table({ headers, className, children }: TableProps) {
   return (
     <>
       <div className="flex flex-col gap-2 md:gap-4 lg:!hidden">
-        {rows.map((row, index) => (
+        {(Array.isArray(rows) ? rows : [rows]).map((row, index) => (
           <div
             key={index}
             className={classNames(
@@ -47,7 +47,10 @@ export function Table({ headers, className, children }: TableProps) {
               "px-2 py-4 md:px-4 md:py-6 grid grid-cols-1 gap-2"
             )}
           >
-            {row.props.children.map((child, index) => {
+            {(Array.isArray(row.props.children)
+              ? row.props.children
+              : [row.props.children]
+            ).map((child, index) => {
               const header = headers.find(
                 ({ property }) => property === child.props.property
               );
@@ -76,7 +79,7 @@ export function Table({ headers, className, children }: TableProps) {
         )}
         style={{ "--column-count": headers.length } as CSSProperties}
       >
-        <Table.Row className="rounded-t-generic">
+        <Table.Row className="rounded-t-generic" role="header">
           {headers.map((header, index) => (
             <Table.Cell
               key={index}
@@ -94,10 +97,11 @@ export function Table({ headers, className, children }: TableProps) {
 }
 
 interface TableRowProps extends WithOptionalClassname {
-  children: ReactElement<TableCellProps>[];
+  children: ReactElement<TableCellProps> | ReactElement<TableCellProps>[];
+  role?: string;
 }
 
-function TableRow({ children, className }: TableRowProps) {
+function TableRow({ role, children, className }: TableRowProps) {
   return (
     <div
       className={classNames(
@@ -106,6 +110,7 @@ function TableRow({ children, className }: TableRowProps) {
         "odd:bg-neutral-extra-light dark:even:bg-white dark:text-dark-primary border-b border-neutral-light last:border-none last:rounded-b-generic",
         className
       )}
+      role={role ?? "row"}
     >
       {children}
     </div>
@@ -135,6 +140,7 @@ function TableCell({
         className
       )}
       data-column={property}
+      data-testid={`Table.Cell.${property}`}
     >
       {children}
     </div>

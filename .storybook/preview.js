@@ -1,4 +1,4 @@
-import { Container, StyleProvider } from "../src";
+import { Container, StyleProvider, ToastProvider } from "../src";
 import "../src/styles/global.css";
 
 const preview = {
@@ -53,9 +53,11 @@ export default preview;
 export const decorators = [
   (Story) => (
     <StyleProvider>
-      <Container>
-        <Story />
-      </Container>
+      <ToastProvider>
+        <Container>
+          <Story />
+        </Container>
+      </ToastProvider>
     </StyleProvider>
   )
 ];

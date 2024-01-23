@@ -32,7 +32,7 @@ export function Card({ children, className }: CardProps) {
   return (
     <div
       className={classNames(
-        "bg-white rounded-generic shadow max-w-full md:max-w-lg lg:max-w-xl",
+        "bg-white rounded-generic shadow max-w-full md:max-w-96",
         className
       )}
     >

@@ -5,6 +5,7 @@ import { AlertsSection } from "../components/AlertsSection";
 import { AvatarsSection } from "../components/AvatarsSection";
 import { BreadcrumbsSection } from "../components/BreadcrumbsSection";
 import { ButtonsSection } from "../components/ButtonsSection";
+import { CardsSection } from "../components/CardsSection";
 import { ChipsSection } from "../components/ChipsSection";
 import { CommentsSection } from "../components/CommentsSection";
 import { FormsSection } from "../components/FormsSection";
@@ -41,6 +42,7 @@ export default function Home() {
       <TooltipsSection />
       <AlertsSection />
       <ModalsSection />
+      <CardsSection />
       <TabsSection />
       <AvatarsSection />
       <CommentsSection />

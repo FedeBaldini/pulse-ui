@@ -2,6 +2,7 @@ export * from "./Alert";
 export * from "./Avatar";
 export * from "./Breadcrumb";
 export * from "./Button";
+export * from "./Card";
 export * from "./Comment";
 export * from "./Container";
 export * from "./GradientSegment";

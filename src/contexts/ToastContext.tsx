@@ -11,7 +11,7 @@ import {
 import classNames from "classnames";
 
 import { Toast } from "../components";
-import { WithChildren } from "../types";
+import { Nullable, WithChildren } from "../types";
 
 export interface IToastContext {
   toast: (children: ReactNode, type?: "error" | "warning" | "success") => void;
@@ -56,11 +56,18 @@ export function ToastProvider({
   );
 
   useEffect(() => {
+    let timeout: Nullable<any> = null;
     if (state.isVisible) {
-      setTimeout(() => {
+      timeout = setTimeout(() => {
         setState({ isVisible: false });
       }, disappearIn);
+    } else {
+      if (timeout) clearTimeout(timeout);
     }
+
+    return () => {
+      if (timeout) clearTimeout(timeout);
+    };
   }, [state]);
 
   const value = useMemo(() => ({ toast }), []);

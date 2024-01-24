@@ -6,6 +6,7 @@ export * from "./Card";
 export * from "./Comment";
 export * from "./Container";
 export * from "./GradientSegment";
+export * from "./Icon";
 export * from "./Loader";
 export * from "./Modal";
 export * from "./ProgressBar";

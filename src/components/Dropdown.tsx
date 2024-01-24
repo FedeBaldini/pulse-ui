@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { useChildren } from "../hooks";
 import { WithChildren } from "../types";
 import { Button, ButtonProps } from "./Button";
+import { Icon } from "./Icon";
 
 export interface DropdownProps extends Omit<ButtonProps, "onClick"> {
   label: string;
@@ -25,20 +26,7 @@ export function Dropdown({ label, children, ...props }: DropdownProps) {
       <Button onClick={handleClick} {...props}>
         <div className="flex items-center">
           {label}
-          <svg
-            className="w-2.5 h-2.5 ms-3"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 10 6"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="m1 1 4 4 4-4"
-            />
-          </svg>
+          <Icon name="ArrowDown" className="ml-2" />
         </div>
       </Button>
       {isOpen ? (

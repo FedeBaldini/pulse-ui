@@ -1,4 +1,9 @@
-import { Container, StyleProvider, WithChildren } from "@fbaldini/pulse-ui";
+import {
+  Container,
+  StyleProvider,
+  ToastProvider,
+  WithChildren
+} from "@fbaldini/pulse-ui";
 import "@fbaldini/pulse-ui/global.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -15,9 +20,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <StyleControllerProvider>
-        <InnerApplication>
-          <ComponentNode {...pageProps} />
-        </InnerApplication>
+        <ToastProvider>
+          <InnerApplication>
+            <ComponentNode {...pageProps} />
+          </InnerApplication>
+        </ToastProvider>
       </StyleControllerProvider>
     </>
   );

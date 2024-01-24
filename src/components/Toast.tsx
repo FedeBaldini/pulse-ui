@@ -54,6 +54,7 @@ function CloseButton({ onClick }: { onClick: SimpleHandler }) {
       type="button"
       className="text-neutral dark:text-neutral-extra-light bg-transparent hover:bg-neutral-extra-light dark:hover:bg-neutral rounded-full text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
       onClick={onClick}
+      data-testid="CloseButton"
     >
       <svg
         className="w-3 h-3"
@@ -76,7 +77,10 @@ function CloseButton({ onClick }: { onClick: SimpleHandler }) {
 
 function ErrorIcon() {
   return (
-    <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-error">
+    <div
+      className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-error"
+      data-testid="ErrorIcon"
+    >
       <svg
         className="w-5 h-5"
         aria-hidden="true"
@@ -92,7 +96,10 @@ function ErrorIcon() {
 
 function WarningIcon() {
   return (
-    <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-warning">
+    <div
+      className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-warning"
+      data-testid="WarningIcon"
+    >
       <svg
         className="w-5 h-5"
         aria-hidden="true"
@@ -109,7 +116,10 @@ function WarningIcon() {
 
 function SuccessIcon() {
   return (
-    <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-success">
+    <div
+      className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-success"
+      data-testid="SuccessIcon"
+    >
       <svg
         className="w-5 h-5"
         xmlns="http://www.w3.org/2000/svg"

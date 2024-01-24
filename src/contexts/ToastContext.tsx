@@ -68,7 +68,11 @@ export function ToastProvider({
   return (
     <ToastContextProvider value={value}>
       {children}
-      <div className="fixed top-0 left-0 w-full h-full -z-10">
+      <div
+        className={classNames("fixed top-0 left-0 w-full h-full -z-10", {
+          "z-10": state.isVisible
+        })}
+      >
         <div className="relative w-full h-full">
           <Toast
             className={classNames(

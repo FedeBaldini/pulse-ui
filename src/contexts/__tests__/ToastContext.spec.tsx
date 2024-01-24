@@ -26,7 +26,7 @@ const TestComponent = ({
   );
 };
 
-describe("components/ToastProvider", () => {
+describe("contexts/ToastContext", () => {
   function renderComponent(config?: Partial<Config>) {
     return render(
       <ToastProvider disappearIn={config?.disappearIn}>

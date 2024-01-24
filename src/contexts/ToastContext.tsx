@@ -68,11 +68,11 @@ export function ToastProvider({
   return (
     <ToastContextProvider value={value}>
       {children}
-      <div className="absolute top-0 left-0 w-full h-full">
-        <div className="relative">
+      <div className="fixed top-0 left-0 w-full h-full -z-10">
+        <div className="relative w-full h-full">
           <Toast
             className={classNames(
-              "absolute transition ease-in-out duration-500",
+              "absolute transition ease-in-out duration-500 z-[9999]",
               {
                 "top-2 left-4 md:top-4 md:left-6 lg:top-6 lg:left-8 -translate-x-[200%]":
                   position === "topLeft",

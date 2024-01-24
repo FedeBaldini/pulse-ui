@@ -23,6 +23,7 @@ export function StyleProvider({ children, theme }: StyleProviderProps) {
   return (
     <StyleContextProvider value={value}>
       <div
+        className="relative"
         style={
           {
             "--border-radius-generic": value.borderRadius.generic,
@@ -61,7 +62,6 @@ export function StyleProvider({ children, theme }: StyleProviderProps) {
             "--dark-primary-color": value.colors.darkPrimary
           } as CSSProperties
         }
-        className="flex-item"
       >
         {children}
       </div>

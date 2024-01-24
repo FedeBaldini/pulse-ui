@@ -7,7 +7,7 @@ export function BreadcrumbsSection() {
       <Title as="h5" className="my-2">
         Default
       </Title>
-      <div className="grid grid-cols-2">
+      <div className="grid md:grid-cols-2">
         <Breadcrumb>
           <Breadcrumb.Item>
             <svg
@@ -67,7 +67,7 @@ export function BreadcrumbsSection() {
       <Title as="h5" className="my-2">
         With background
       </Title>
-      <div className="grid grid-cols-2">
+      <div className="grid md:grid-cols-2">
         <Breadcrumb withBackground>
           <Breadcrumb.Item>
             <svg

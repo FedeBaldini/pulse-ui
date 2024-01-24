@@ -1,79 +1,38 @@
-import { Button, Modal, Section, Title, useModal } from "@fbaldini/pulse-ui";
+import { Button, Section, Title, Toast, useToast } from "@fbaldini/pulse-ui";
 
 export function ToastsSection() {
   return (
     <Section>
-      <Title as="h3">Modals</Title>
+      <Title as="h3">Toasts</Title>
       <Title as="h5">Default</Title>
-      <DefaultModal />
-      <Title as="h5">With close on outside click</Title>
-      <CloseOutsideClickModal />
+      <div className="grid md:grid-cols-4 gap-2">
+        <Toast children="A nice toast" onClose={console.log} />
+        <Toast children="A nice toast" onClose={console.log} error />
+        <Toast children="A nice toast" onClose={console.log} warning />
+        <Toast children="A nice toast" onClose={console.log} success />
+      </div>
+      <Title as="h5">With useToast</Title>
+      <WithUseToast />
     </Section>
   );
 }
 
-function DefaultModal() {
-  const { isOpen, open, close } = useModal();
+function WithUseToast() {
+  const toast = useToast();
   return (
-    <>
-      <Button style="primary" onClick={open}>
-        Open modal
+    <div className="grid md:grid-cols-4 gap-2">
+      <Button style="primary" onClick={() => toast("A nice toast")}>
+        Open default toast
       </Button>
-      <Modal onClose={close} isOpen={isOpen}>
-        <Modal.Header onClose={close}>
-          <Title as="h3">Lorem ipsum dolor sit amet</Title>
-        </Modal.Header>
-        <Modal.Content>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            euismod nulla. Nullam sagittis lectus ut velit blandit iaculis.
-            Etiam posuere, nunc ac iaculis fringilla, tellus sem tincidunt
-            ipsum, ac mattis lacus velit a tellus.
-          </p>
-          <p>
-            Donec viverra, odio a bibendum imperdiet, turpis ipsum vestibulum
-            ligula, at suscipit diam ipsum id nunc. Integer accumsan, libero id
-            mollis imperdiet, metus velit finibus enim, eget suscipit lectus
-            nisi vel nunc.
-          </p>
-        </Modal.Content>
-        <Modal.Actions>
-          <Button children="Close" outlined onClick={close} />
-        </Modal.Actions>
-      </Modal>
-    </>
-  );
-}
-
-function CloseOutsideClickModal() {
-  const { isOpen, open, close } = useModal();
-  return (
-    <>
-      <Button style="primary" onClick={open}>
-        Open modal
+      <Button style="primary" onClick={() => toast("A nice toast", "error")}>
+        Open error toast
       </Button>
-      <Modal onClose={close} isOpen={isOpen} closeOnOutsideClick>
-        <Modal.Header onClose={close}>
-          <Title as="h3">Lorem ipsum dolor sit amet</Title>
-        </Modal.Header>
-        <Modal.Content>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
-            euismod nulla. Nullam sagittis lectus ut velit blandit iaculis.
-            Etiam posuere, nunc ac iaculis fringilla, tellus sem tincidunt
-            ipsum, ac mattis lacus velit a tellus.
-          </p>
-          <p>
-            Donec viverra, odio a bibendum imperdiet, turpis ipsum vestibulum
-            ligula, at suscipit diam ipsum id nunc. Integer accumsan, libero id
-            mollis imperdiet, metus velit finibus enim, eget suscipit lectus
-            nisi vel nunc.
-          </p>
-        </Modal.Content>
-        <Modal.Actions>
-          <Button children="Close" outlined onClick={close} />
-        </Modal.Actions>
-      </Modal>
-    </>
+      <Button style="primary" onClick={() => toast("A nice toast", "warning")}>
+        Open warning toast
+      </Button>
+      <Button style="primary" onClick={() => toast("A nice toast", "success")}>
+        Open success toast
+      </Button>
+    </div>
   );
 }

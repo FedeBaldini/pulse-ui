@@ -53,7 +53,7 @@ export default preview;
 export const decorators = [
   (Story) => (
     <StyleProvider>
-      <ToastProvider>
+      <ToastProvider position="bottomRight">
         <Container>
           <Story />
         </Container>

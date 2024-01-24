@@ -73,21 +73,35 @@ export function ToastProvider({
           className={classNames(
             "absolute transition ease-in-out duration-500",
             {
-              "top-2 left-4 md:top-4 md:left-6 lg:top-6 lg:left-8 -translate-y-[100vh]":
+              "top-2 left-4 md:top-4 md:left-6 lg:top-6 lg:left-8 -translate-x-[200%]":
                 position === "topLeft",
-              "top-2 left-1/2 md:top-4 lg:top-6 -translate-y-[100vh] -translate-x-1/2":
-                position === "topCenter",
-              "top-2 right-4 md:top-4 md:right-6 lg:top-6 lg:right-8 -translate-y-[100vh]":
-                position === "topRight",
-              "bottom-2 left-4 md:bottom-4 md:left-6 lg:bottom-6 lg:left-8 translate-y-[100vh]":
-                position === "bottomLeft",
-              "bottom-2 left-1/2 md:bottom-4 lg:bottom-6 translate-y-[100vh] -translate-x-1/2":
-                position === "bottomCenter",
-              "bottom-2 right-4 md:bottom-4 md:right-6 lg:bottom-6 lg:right-8 translate-y-[100vh]":
-                position === "bottomRight"
+              "!translate-x-0": state.isVisible && position === "topLeft"
             },
             {
-              "!translate-y-0": state.isVisible
+              "top-2 left-1/2 md:top-4 lg:top-6 -translate-y-[200%] -translate-x-1/2":
+                position === "topCenter",
+              "!translate-y-0": state.isVisible && position === "topCenter"
+            },
+            {
+              "top-2 right-4 md:top-4 md:right-6 lg:top-6 lg:right-8 translate-x-[200%]":
+                position === "topRight",
+              "!translate-x-0": state.isVisible && position === "topRight"
+            },
+            {
+              "bottom-2 left-4 md:bottom-4 md:left-6 lg:bottom-6 lg:left-8 -translate-x-[200%]":
+                position === "bottomLeft",
+              "!translate-x-0": state.isVisible && position === "bottomLeft"
+            },
+            {
+              "bottom-2 left-1/2 md:bottom-4 lg:bottom-6 -translate-x-[200%] ":
+                position === "bottomCenter",
+              "!-translate-x-1/2":
+                state.isVisible && position === "bottomCenter"
+            },
+            {
+              "bottom-2 right-4 md:bottom-4 md:right-6 lg:bottom-6 lg:right-8 translate-x-[200%]":
+                position === "bottomRight",
+              "!translate-x-0": state.isVisible && position === "bottomRight"
             }
           )}
           children={"children" in state && state.children}

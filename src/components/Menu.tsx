@@ -15,14 +15,14 @@ export function Menu({ isOpen, children, className }: MenuProps) {
     <ul
       role="menu"
       className={classNames(
-        "absolute z-10 min-w-44 overflow-auto rounded-generic text-sm",
+        "absolute z-10 min-w-44 overflow-auto rounded-generic text-sm bg-white",
         {
           "max-h-0": !isOpen,
           "border shadow-lg border-neutral-extra-light max-h-64": isOpen
         },
         className
       )}
-      style={{ transition: "max-height 1s ease-in-out" }}
+      style={{ transition: "max-height 500ms ease-in-out" }}
     >
       {items}
     </ul>

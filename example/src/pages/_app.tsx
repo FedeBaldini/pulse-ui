@@ -20,11 +20,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <StyleControllerProvider>
-        <ToastProvider>
-          <InnerApplication>
-            <ComponentNode {...pageProps} />
-          </InnerApplication>
-        </ToastProvider>
+        <InnerApplication>
+          <ComponentNode {...pageProps} />
+        </InnerApplication>
       </StyleControllerProvider>
     </>
   );
@@ -35,9 +33,11 @@ function InnerApplication({ children }: WithChildren) {
 
   return (
     <StyleProvider theme={theme}>
-      <div className={isDarkModeActive ? "dark" : undefined}>
-        <Container className="pt-8 md:pt-12">{children}</Container>
-      </div>
+      <ToastProvider>
+        <div className={isDarkModeActive ? "dark" : undefined}>
+          <Container className="pt-8 md:pt-12">{children}</Container>
+        </div>
+      </ToastProvider>
     </StyleProvider>
   );
 }

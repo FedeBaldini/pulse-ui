@@ -14,16 +14,16 @@ export function Breadcrumb({
   return (
     <nav
       className={classNames(
-        "flex py-3 rounded-generic",
+        "flex py-2 rounded-generic",
         {
-          "px-5 border border-neutral-light bg-neutral-extra-light":
+          "px-4 border border-neutral-light bg-neutral-extra-light dark:text-dark-primary":
             withBackground
         },
         className
       )}
       aria-label="Breadcrumb"
     >
-      <ol className="inline-flex items-center space-x-1 md:space-x-2">
+      <ol className="inline-flex items-center space-x-2">
         {Array.isArray(children)
           ? children.map((child, index) => (
               <li key={index} className="inline-flex items-center">
@@ -43,7 +43,7 @@ function BreadcrumbItem({
   return (
     <div
       className={classNames(
-        "flex items-center ms-1 text-sm font-medium md:ms-2",
+        "flex items-center ml-1 text-sm font-medium md:ml-2",
         className
       )}
     >

@@ -10,7 +10,7 @@ export function Segment({ as: As = "div", children, className }: SegmentProps) {
   return (
     <As
       className={classNames(
-        "bg-neutral-extra-light rounded-segment p-4 md:p-6",
+        "bg-neutral-extra-light rounded-segment p-4 md:p-6 dark:text-dark-primary",
         className
       )}
     >

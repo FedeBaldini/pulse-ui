@@ -29,7 +29,7 @@ export function Select({
     <select
       className={classNames(
         INPUT_CLASSES({ small, error, warning, success }),
-        "pr-8 !bg-[calc(100%_-_0.75rem)]",
+        "pr-8 !bg-[calc(100%_-_0.75rem)] !bg-white dark:!bg-neutral-extra-light",
         className
       )}
       {...props}

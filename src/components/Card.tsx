@@ -53,7 +53,12 @@ function CardHeader({
   className
 }: WithChildren & WithOptionalClassname) {
   return (
-    <div className={classNames("p-2 md:p-4 border-b", className)}>
+    <div
+      className={classNames(
+        "p-2 md:p-4 border-b dark:text-dark-primary",
+        className
+      )}
+    >
       {children}
     </div>
   );
@@ -78,7 +83,13 @@ function CardTitle({
   className
 }: WithChildren & Pick<TitleProps, "as"> & WithOptionalClassname) {
   return (
-    <Title as={as} className={classNames("mt-2 md:mt-4 !mb-0", className)}>
+    <Title
+      as={as}
+      className={classNames(
+        "mt-2 md:mt-4 !mb-0 dark:!text-dark-primary",
+        className
+      )}
+    >
       {children}
     </Title>
   );
@@ -91,7 +102,10 @@ function CardSubTitle({
 }: WithChildren & Pick<TypographyProps, "type"> & WithOptionalClassname) {
   return (
     <Typography
-      className={classNames("!m-0 text-neutral-dark", className)}
+      className={classNames(
+        "!m-0 text-neutral-dark dark:text-neutral-dark",
+        className
+      )}
       type={type}
     >
       {children}
@@ -103,7 +117,11 @@ function CardContent({
   children,
   className
 }: WithChildren & WithOptionalClassname) {
-  return <div className={className}>{children}</div>;
+  return (
+    <div className={classNames("dark:text-dark-primary", className)}>
+      {children}
+    </div>
+  );
 }
 
 function CardFooter({
@@ -111,7 +129,12 @@ function CardFooter({
   className
 }: WithChildren & WithOptionalClassname) {
   return (
-    <div className={classNames("p-2 md:p-4 border-t", className)}>
+    <div
+      className={classNames(
+        "p-2 md:p-4 border-t dark:text-dark-primary",
+        className
+      )}
+    >
       {children}
     </div>
   );

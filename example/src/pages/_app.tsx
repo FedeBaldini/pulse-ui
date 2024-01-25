@@ -35,7 +35,7 @@ function InnerApplication({ children }: WithChildren) {
     <StyleProvider theme={theme}>
       <ToastProvider>
         <div className={isDarkModeActive ? "dark" : undefined}>
-          <Container className="pt-8 md:pt-12">{children}</Container>
+          <Container className="py-8 md:py-12">{children}</Container>
         </div>
       </ToastProvider>
     </StyleProvider>

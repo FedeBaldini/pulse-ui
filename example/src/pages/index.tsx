@@ -11,6 +11,7 @@ import { CommentsSection } from "../components/CommentsSection";
 import { FormsSection } from "../components/FormsSection";
 import { GradientSegmentsSection } from "../components/GradientSegmentsSection";
 import { LoadersSection } from "../components/LoadersSection";
+import { MenuSection } from "../components/MenuSection";
 import { ModalsSection } from "../components/ModalsSection";
 import { ModeSwitcher } from "../components/ModeSwitcher";
 import { ProgressBarsSection } from "../components/ProgressBarsSection";
@@ -43,6 +44,7 @@ export default function Home() {
       <TooltipsSection />
       <AlertsSection />
       <ModalsSection />
+      <MenuSection />
       <ToastsSection />
       <CardsSection />
       <TabsSection />

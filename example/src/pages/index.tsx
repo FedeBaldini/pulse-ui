@@ -8,6 +8,7 @@ import { ButtonsSection } from "../components/ButtonsSection";
 import { CardsSection } from "../components/CardsSection";
 import { ChipsSection } from "../components/ChipsSection";
 import { CommentsSection } from "../components/CommentsSection";
+import { DrawerSection } from "../components/DrawerSection";
 import { FormsSection } from "../components/FormsSection";
 import { GradientSegmentsSection } from "../components/GradientSegmentsSection";
 import { LoadersSection } from "../components/LoadersSection";
@@ -45,6 +46,7 @@ export default function Home() {
       <AlertsSection />
       <ModalsSection />
       <MenuSection />
+      <DrawerSection />
       <ToastsSection />
       <CardsSection />
       <TabsSection />

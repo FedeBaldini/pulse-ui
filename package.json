@@ -1,6 +1,6 @@
 {
   "name": "@fbaldini/pulse-ui",
-  "version": "0.0.70",
+  "version": "0.0.71",
   "description": "A component library and design system for React, leveraging the power of React, TypeScript, and Tailwind CSS to streamline front-end development with modern and customizable UI components.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

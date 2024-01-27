@@ -18,7 +18,7 @@ export function Drawer({ isOpen, position = "left", children }: DrawerProps) {
   return (
     <div
       className={classNames(
-        "fixed top-0 z-40 h-screen p-4 overflow-y-auto transition-transform bg-white w-full md:w-80 shadow-lg",
+        "fixed top-0 z-40 h-screen p-4 overflow-y-auto transition-transform bg-white w-full md:max-w-80 shadow-lg",
         "flex flex-col gap-2 md:gap-4 lg:gap-6",
         {
           "-translate-x-full": !isOpen && position === "left",

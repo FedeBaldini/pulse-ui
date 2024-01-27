@@ -5,6 +5,8 @@ export * from "./Button";
 export * from "./Card";
 export * from "./Comment";
 export * from "./Container";
+export * from "./Drawer";
+export * from "./Dropdown";
 export * from "./GradientSegment";
 export * from "./Icon";
 export * from "./Loader";

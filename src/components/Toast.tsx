@@ -3,6 +3,7 @@ import { useMemo } from "react";
 import classNames from "classnames";
 
 import { SimpleHandler, WithChildren, WithOptionalClassname } from "../types";
+import { CloseButton } from "./CloseButton";
 import { Icon } from "./Icon";
 
 export interface ToastProps extends WithOptionalClassname, WithChildren {
@@ -46,19 +47,6 @@ export function Toast({
       {children}
       <CloseButton onClick={onClose} />
     </div>
-  );
-}
-
-function CloseButton({ onClick }: { onClick: SimpleHandler }) {
-  return (
-    <button
-      type="button"
-      className="text-neutral dark:text-neutral-extra-light bg-transparent hover:bg-neutral-extra-light dark:hover:bg-neutral rounded-full text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
-      onClick={onClick}
-      data-testid="CloseButton"
-    >
-      <Icon name="Close" />
-    </button>
   );
 }
 

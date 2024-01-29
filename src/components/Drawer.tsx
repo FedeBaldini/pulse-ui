@@ -27,11 +27,13 @@ export function Drawer({
     <div
       className={classNames(
         {
-          hidden: !isOpen,
-          "flex justify-center items-center w-full h-full max-h-full md:inset-0":
-            isOpen
+          "-translate-x-full": !isOpen && position === "left",
+          "translate-x-full": !isOpen && position === "right",
+          "left-0": position === "left",
+          "right-0": position === "right"
         },
-        "overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50",
+        "flex justify-center items-center w-full h-full max-h-full md:inset-0",
+        "overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 transition-transform",
         "bg-[rgb(236,240,241,.8)] dark:bg-[rgb(236,240,241,.9)]"
       )}
       data-testid="ModalBackground"

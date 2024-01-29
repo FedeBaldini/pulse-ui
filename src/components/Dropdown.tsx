@@ -30,7 +30,7 @@ export function Dropdown({ label, children, ...props }: DropdownProps) {
         </div>
       </Button>
       {isOpen ? (
-        <div className="absolute z-10 bg-white rounded-generic shadow w-44">
+        <div className="absolute z-10 bg-white rounded-generic shadow w-full min-w-44 top-[calc(100%_+_4px)]">
           <ul className="py-2 text-sm">{items}</ul>
         </div>
       ) : null}

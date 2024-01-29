@@ -7,9 +7,17 @@ import { CloseButton } from "./CloseButton";
 export interface DrawerProps extends WithChildren {
   isOpen: boolean;
   position?: "left" | "right";
+  closeOnOutsideClick?: boolean;
+  onClose: SimpleHandler;
 }
 
-export function Drawer({ isOpen, position = "left", children }: DrawerProps) {
+export function Drawer({
+  isOpen,
+  position = "left",
+  children,
+  closeOnOutsideClick,
+  onClose
+}: DrawerProps) {
   const { getChildrenOfType } = useChildren(children);
   const header = getChildrenOfType(Drawer.Header);
   const content = getChildrenOfType(Drawer.Content);
@@ -18,19 +26,34 @@ export function Drawer({ isOpen, position = "left", children }: DrawerProps) {
   return (
     <div
       className={classNames(
-        "fixed top-0 z-40 h-screen p-4 overflow-y-auto transition-transform bg-white w-full md:max-w-md lg:max-w-lg xl:max-w-xl shadow-lg",
-        "flex flex-col gap-2 md:gap-4 lg:gap-6",
         {
-          "-translate-x-full": !isOpen && position === "left",
-          "translate-x-full": !isOpen && position === "right",
-          "left-0": position === "left",
-          "right-0": position === "right"
-        }
+          hidden: !isOpen,
+          "flex justify-center items-center w-full h-full max-h-full md:inset-0":
+            isOpen
+        },
+        "overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50",
+        "bg-[rgb(236,240,241,.8)] dark:bg-[rgb(236,240,241,.9)]"
       )}
+      data-testid="ModalBackground"
+      onClick={closeOnOutsideClick ? onClose : undefined}
     >
-      {header}
-      {content}
-      {footer}
+      <div
+        className={classNames(
+          "fixed top-0 z-40 h-screen p-4 overflow-y-auto transition-transform bg-white w-full md:max-w-md lg:max-w-lg xl:max-w-xl shadow-lg",
+          "flex flex-col gap-2 md:gap-4 lg:gap-6",
+          {
+            "-translate-x-full": !isOpen && position === "left",
+            "translate-x-full": !isOpen && position === "right",
+            "left-0": position === "left",
+            "right-0": position === "right"
+          }
+        )}
+        onClick={(event) => event.stopPropagation()}
+      >
+        {header}
+        {content}
+        {footer}
+      </div>
     </div>
   );
 }

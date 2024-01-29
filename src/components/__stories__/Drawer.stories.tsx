@@ -43,5 +43,6 @@ export const Standard: StoryFn<DrawerProps> = (args) => (
 );
 Standard.args = {
   isOpen: true,
-  position: "left"
+  position: "left",
+  closeOnOutsideClick: false
 };

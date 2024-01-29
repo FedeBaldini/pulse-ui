@@ -23,6 +23,7 @@ import { TitlesSection } from "../components/TitlesSection";
 import { ToastsSection } from "../components/ToastsSection";
 import { TooltipsSection } from "../components/TooltipsSection";
 import { TypographiesSection } from "../components/TypographiesSection";
+import { DropdownsSection } from "../components/DropdownsSection";
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
         Configure theme
       </Link>
       <ButtonsSection />
+      <DropdownsSection/>
       <FormsSection />
       <TablesSection />
       <ProgressBarsSection />

@@ -22,7 +22,7 @@ export function Dropdown({ label, children, ...props }: DropdownProps) {
   const items = getChildrenOfType(Dropdown.Item);
 
   return (
-    <>
+    <div className="relative">
       <Button onClick={handleClick} {...props}>
         <div className="flex items-center">
           {label}
@@ -34,7 +34,7 @@ export function Dropdown({ label, children, ...props }: DropdownProps) {
           <ul className="py-2 text-sm">{items}</ul>
         </div>
       ) : null}
-    </>
+    </div>
   );
 }
 
